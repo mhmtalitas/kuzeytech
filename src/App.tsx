@@ -22,7 +22,12 @@ const queryClient = new QueryClient();
 const ScrollToTop = () => {
   const location = useLocation();
   useEffect(() => {
-    window.scrollTo(0, 0);
+    // Try to scroll the window first with a slight delay
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+      document.documentElement.scrollTop = 0; // For html element
+      document.body.scrollTop = 0; // For body element (legacy browsers)
+    }, 0); // Execute immediately after current task queue
   }, [location.pathname]);
   return null;
 };
@@ -33,23 +38,25 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <ScrollToTop />
-        <Navigation />
-        <main className="pt-16">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/hakkimizda" element={<About />} />
-            <Route path="/hizmetler" element={<Services />} />
-            <Route path="/urunler" element={<Products />} />
-            <Route path="/urun-detay/:slug" element={<ProductDetail />} />
-            <Route path="/referanslar" element={<References />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/blog/:slug" element={<BlogDetail />} />
-            <Route path="/iletisim" element={<Contact />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </main>
-        <Footer />
+        <div className="flex flex-col min-h-screen">
+          <ScrollToTop />
+          <Navigation />
+          <main className="pt-16 flex-grow">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/hakkimizda" element={<About />} />
+              <Route path="/hizmetler" element={<Services />} />
+              <Route path="/urunler" element={<Products />} />
+              <Route path="/urun-detay/:slug" element={<ProductDetail />} />
+              <Route path="/referanslar" element={<References />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:slug" element={<BlogDetail />} />
+              <Route path="/iletisim" element={<Contact />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

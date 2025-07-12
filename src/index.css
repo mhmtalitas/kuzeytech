@@ -110,13 +110,17 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
-  body {
-    @apply bg-background text-foreground;
-    position: relative;
+  html {
+    scroll-padding-top: 4rem; /* For fixed header */
   }
 
-  html, body {
-    height: 100%;
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  html,
+  body {
+    min-height: 100vh; /* Added to ensure full viewport height */
     overflow-x: hidden;
   }
 }
