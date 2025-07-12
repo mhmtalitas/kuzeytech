@@ -12,6 +12,7 @@ import Products from "./pages/Products";
 import References from "./pages/References";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
+import ProductDetail from "./pages/ProductDetail";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,6 +30,7 @@ const App = () => (
             <Route path="/hakkimizda" element={<About />} />
             <Route path="/hizmetler" element={<Services />} />
             <Route path="/urunler" element={<Products />} />
+            <Route path="/urun-detay/:slug" element={<ProductDetail />} />
             <Route path="/referanslar" element={<References />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/iletisim" element={<Contact />} />

@@ -17,7 +17,8 @@ const Services = () => {
         "Doğal dil işleme",
         "Görüntü tanıma ve analiz",
         "Tahmine dayalı analitik",
-        "Chatbot ve sanal asistanlar"
+        "Chatbot ve sanal asistanlar",
+        "Özel AI modelleri geliştirme"
       ]
     },
     {
@@ -29,31 +30,73 @@ const Services = () => {
         "Power Automate ile iş akışları",
         "Power BI ile veri görselleştirme",
         "Power Virtual Agents chatbot",
-        "SharePoint entegrasyonu"
+        "SharePoint entegrasyonu",
+        "Düşük kodlu uygulama geliştirme"
+      ]
+    },
+    {
+      icon: Users,
+      title: "Modern Çalışma Ortamı (Modern Workplace)",
+      description: "Ekiplerinizin verimli ve güvenli çalışmasını sağlayan modern workplace çözümleri.",
+      features: [
+        "Microsoft 365 kurulumu ve yönetimi",
+        "Microsoft Teams entegrasyonu ve özelleştirme",
+        "Exchange Online e-posta çözümleri",
+        "SharePoint ve OneDrive yönetimi",
+        "Cihaz yönetimi (Microsoft Intune)",
+        "Kullanıcı eğitimi ve değişim yönetimi"
       ]
     },
     {
       icon: Cloud,
-      title: "Bulut ve Güvenlik Çözümleri",
-      description: "Güvenli ve ölçeklenebilir bulut altyapısı ile verimliliğinizi artırın.",
+      title: "Bulut ve Hibrit Altyapı",
+      description: "Azure bulut platformu ile altyapınızı modernize edin ve optimize edin.",
       features: [
-        "Azure Cloud migrasyonu",
-        "AWS çözümleri",
-        "Hibrit bulut stratejileri",
-        "Backup ve disaster recovery",
-        "Cloud güvenlik optimizasyonu"
+        "Azure Cloud migration hizmetleri",
+        "Hibrit bulut çözümleri",
+        "Altyapı yönetimi ve optimizasyonu",
+        "Maliyet optimizasyonu",
+        "Performans izleme ve raporlama",
+        "24/7 altyapı destek hizmetleri"
+      ]
+    },
+    {
+      icon: Shield,
+      title: "Siber Güvenlik ve Kimlik Yönetimi",
+      description: "Kapsamlı güvenlik çözümleri ile dijital varlıklarınızı koruyun.",
+      features: [
+        "Azure Active Directory kimlik yönetimi",
+        "Multi-factor authentication (MFA)",
+        "Tehdit koruması ve izleme",
+        "Güvenlik operasyonları merkezi (SOC)",
+        "E-posta güvenliği çözümleri",
+        "Güvenlik denetimleri ve uyumluluk"
       ]
     },
     {
       icon: BarChart3,
-      title: "Veri ve Raporlama (Power BI, MS Fabric)",
-      description: "Verilerinizi analiz edin ve görselleştirin.",
+      title: "Veri ve İş Zekası",
+      description: "Verilerinizi değerli içgörülere dönüştürün ve akıllı kararlar alın.",
       features: [
-        "İnteraktif dashboardlar",
-        "Real-time veri analizi",
+        "Power BI dashboard ve raporlama",
         "MS Fabric data platformu",
-        "Veri modelleme",
-        "Self-service BI çözümleri"
+        "Veri ambarı çözümleri",
+        "İş zekası (Business Intelligence)",
+        "Gerçek zamanlı veri analizi",
+        "Self-service analytics"
+      ]
+    },
+    {
+      icon: Key,
+      title: "Yedekleme ve Felaket Kurtarma",
+      description: "İş sürekliliğinizi sağlayan güvenilir yedekleme ve kurtarma çözümleri.",
+      features: [
+        "Azure Backup çözümleri",
+        "Site Recovery planlaması",
+        "Disaster recovery stratejileri",
+        "Veri replikasyonu",
+        "İş sürekliliği planlaması",
+        "Recovery time optimization"
       ]
     },
     {
@@ -65,31 +108,8 @@ const Services = () => {
         "Exchange Server çözümleri",
         "Lisans optimizasyonu",
         "E-posta güvenliği",
-        "Compliance ve arşivleme"
-      ]
-    },
-    {
-      icon: Shield,
-      title: "Self-Service Password Reset",
-      description: "Güvenli ve kullanıcı dostu parola yönetim çözümleri.",
-      features: [
-        "Azure AD Connect",
-        "Multi-factor authentication",
-        "Self-service portal",
-        "Password policy yönetimi",
-        "Güvenlik raporlaması"
-      ]
-    },
-    {
-      icon: Users,
-      title: "Digital Workplace (Teams Çözümleri)",
-      description: "Modern işyeri çözümleriyle ekip çalışmanızı güçlendirin.",
-      features: [
-        "Microsoft Teams özelleştirme",
-        "Toplantı odası çözümleri",
-        "SharePoint intranet",
-        "Yammer enterprise sosyal ağ",
-        "OneDrive iş çözümleri"
+        "Compliance ve arşivleme",
+        "Hybrid exchange yapılandırması"
       ]
     },
     {
@@ -101,7 +121,8 @@ const Services = () => {
         "React, Vue.js, Angular",
         "CMS çözümleri",
         "SEO optimizasyonu",
-        "Web performans analizi"
+        "Web performans analizi",
+        "Progressive Web Apps (PWA)"
       ]
     },
     {
@@ -113,7 +134,8 @@ const Services = () => {
         "Ödeme sistemi entegrasyonu",
         "Envanter yönetimi",
         "CRM entegrasyonu",
-        "Mobil ticaret çözümleri"
+        "Mobil ticaret çözümleri",
+        "B2B e-ticaret platformları"
       ]
     },
     {
@@ -125,7 +147,8 @@ const Services = () => {
         "React Native geliştirme",
         "Flutter uygulamaları",
         "Native uygulama geliştirme",
-        "App Store optimizasyonu"
+        "App Store optimizasyonu",
+        "Mobil uygulama bakımı"
       ]
     },
     {
@@ -137,7 +160,8 @@ const Services = () => {
         "Stok takibi uygulamaları",
         "İnsan kaynakları sistemleri",
         "Muhasebe yazılımları",
-        "Özel ERP çözümleri"
+        "Özel ERP çözümleri",
+        "API geliştirme ve entegrasyon"
       ]
     },
     {
@@ -149,7 +173,8 @@ const Services = () => {
         "Güvenlik güncellemeleri",
         "Performans optimizasyonu",
         "Hata giderme",
-        "Kullanıcı eğitimleri"
+        "Kullanıcı eğitimleri",
+        "Proaktif sistem yönetimi"
       ]
     }
   ];

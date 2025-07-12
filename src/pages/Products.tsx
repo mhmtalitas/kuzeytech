@@ -2,7 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
-import { Calculator, FileText, Calendar, ArrowRight, Star, Download } from "lucide-react";
+import { Calculator, FileText, Calendar, ArrowRight, Star, Eye, Users, Database } from "lucide-react";
 
 const Products = () => {
   const products = [
@@ -13,15 +13,15 @@ const Products = () => {
       description: "AI destekli akıllı masraf takibi ve raporlama sistemi. Şirket harcamalarınızı otomatik olarak kategorize eder ve analiz eder.",
       features: [
         "Otomatik masraf kategorilendirme",
-        "Makbuz tarama ve OCR",
-        "Bütçe kontrol ve uyarıları",
-        "Detaylı raporlama",
+        "Makbuz tarama ve OCR teknolojisi",
+        "Bütçe kontrol ve uyarı sistemleri",
+        "Detaylı raporlama ve analitik",
         "Mobil uygulama desteği",
-        "Multi-currency desteği"
+        "Multi-currency para birimi desteği"
       ],
-      price: "₺299/ay",
       popular: true,
-      demo: true
+      demoAvailable: true,
+      slug: "smart-expense"
     },
     {
       icon: FileText,
@@ -29,16 +29,16 @@ const Products = () => {
       category: "İnsan Kaynakları",
       description: "CV'leri otomatik olarak farklı formatlara dönüştüren ve standardize eden akıllı sistem.",
       features: [
-        "Çoklu format desteği",
+        "Çoklu format desteği (PDF, Word, HTML)",
         "AI destekli içerik analizi",
-        "Otomatik düzenleme",
+        "Otomatik düzenleme ve formatla",
         "Toplu işlem özelliği",
-        "ATS uyumlu formatlar",
+        "ATS uyumlu format dönüşümü",
         "Anahtar kelime optimizasyonu"
       ],
-      price: "₺199/ay",
       popular: false,
-      demo: true
+      demoAvailable: true,
+      slug: "cv-converter"
     },
     {
       icon: Calendar,
@@ -46,33 +46,33 @@ const Products = () => {
       category: "Etkinlik Yönetimi",
       description: "Kapsamlı etkinlik planlama, takip ve analiz platformu. Etkinliklerinizi baştan sona yönetin.",
       features: [
-        "Etkinlik planlama araçları",
-        "Katılımcı yönetimi",
-        "QR kod check-in",
-        "Real-time analytics",
+        "Etkinlik planlama ve zaman çizelgesi",
+        "Katılımcı kayıt ve yönetim sistemi",
+        "QR kod check-in sistemi",
+        "Real-time analytics ve raporlama",
         "E-posta otomasyonu",
-        "Feedback sistemi"
+        "Feedback ve anket sistemi"
       ],
-      price: "₺399/ay",
       popular: false,
-      demo: true
+      demoAvailable: true,
+      slug: "event-tracker"
     },
     {
-      icon: FileText,
+      icon: Database,
       title: "Document AI",
       category: "Doküman Yönetimi",
       description: "Dokümanları otomatik olarak sınıflandıran, içerik çıkaran ve organize eden AI sistemi.",
       features: [
-        "Otomatik sınıflandırma",
-        "İçerik çıkarma (OCR)",
-        "Arama ve filtreleme",
-        "Versiyon kontrolü",
-        "Güvenli paylaşım",
+        "Otomatik doküman sınıflandırma",
+        "İçerik çıkarma (OCR teknolojisi)",
+        "Akıllı arama ve filtreleme",
+        "Versiyon kontrolü ve geçmiş",
+        "Güvenli paylaşım ve erişim",
         "API entegrasyonu"
       ],
-      price: "₺499/ay",
       popular: false,
-      demo: false
+      demoAvailable: false,
+      slug: "document-ai"
     },
     {
       icon: Calculator,
@@ -81,32 +81,32 @@ const Products = () => {
       description: "Fatura oluşturma, takip ve tahsilat süreçlerini yöneten kapsamlı sistem.",
       features: [
         "Otomatik fatura oluşturma",
-        "Ödeme takibi",
+        "Ödeme takibi ve hatırlatmaları",
         "E-fatura entegrasyonu",
-        "Tahsilat hatırlatmaları",
-        "Finansal raporlar",
-        "CRM entegrasyonu"
+        "Tahsilat süreç yönetimi",
+        "Finansal raporlar ve analizler",
+        "CRM sistemi entegrasyonu"
       ],
-      price: "₺349/ay",
       popular: false,
-      demo: true
+      demoAvailable: true,
+      slug: "invoice-manager"
     },
     {
-      icon: Star,
+      icon: Users,
       title: "CRM Pro",
       category: "Müşteri Yönetimi",
       description: "Müşteri ilişkileri yönetimi için geliştirilmiş kapsamlı CRM çözümü.",
       features: [
         "Müşteri veritabanı yönetimi",
         "Satış süreç takibi",
-        "Otomatik görevlendirme",
-        "E-posta pazarlama",
-        "Raporlama ve analitik",
-        "Mobil uygulama"
+        "Otomatik görev atama sistemi",
+        "E-posta pazarlama entegrasyonu",
+        "Detaylı raporlama ve analitik",
+        "Mobil CRM uygulaması"
       ],
-      price: "₺599/ay",
       popular: true,
-      demo: true
+      demoAvailable: true,
+      slug: "crm-pro"
     }
   ];
 
@@ -159,19 +159,25 @@ const Products = () => {
                   </ul>
                   
                   <div className="pt-4 border-t">
-                    <div className="text-2xl font-bold text-primary mb-4">{product.price}</div>
-                    <div className="space-y-2">
+                    <div className="space-y-3">
                       <Button className="w-full" asChild>
-                        <Link to="/iletisim">
-                          Satın Al
+                        <Link to={`/urun-detay/${product.slug}`}>
+                          <Eye className="mr-2 h-4 w-4" />
+                          Detayları İncele
                         </Link>
                       </Button>
-                      {product.demo && (
-                        <Button variant="outline" className="w-full">
-                          <Download className="mr-2 h-4 w-4" />
-                          Demo İndir
+                      {product.demoAvailable && (
+                        <Button variant="outline" className="w-full" asChild>
+                          <Link to="/iletisim">
+                            Demo Talep Et
+                          </Link>
                         </Button>
                       )}
+                      <Button variant="secondary" className="w-full" asChild>
+                        <Link to="/iletisim">
+                          Fiyat Teklifi Al
+                        </Link>
+                      </Button>
                     </div>
                   </div>
                 </div>

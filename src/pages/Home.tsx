@@ -1,39 +1,39 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { Brain, Cloud, Shield, BarChart3, Settings, Smartphone, ArrowRight } from "lucide-react";
+import { Brain, Cloud, Shield, BarChart3, Settings, Smartphone, ArrowRight, Users } from "lucide-react";
 
 const Home = () => {
   const services = [
     {
       icon: Brain,
       title: "Yapay Zeka Çözümleri",
-      description: "İşletmenizin ihtiyaçlarına özel AI destekli çözümler geliştiriyoruz.",
+      description: "İşletmenizin ihtiyaçlarına özel AI destekli çözümler ve makine öğrenmesi modelleri geliştiriyoruz.",
+    },
+    {
+      icon: Users,
+      title: "Modern Çalışma Ortamı",
+      description: "Microsoft 365, Teams entegrasyonu ve modern workplace çözümleri ile ekiplerinizi güçlendirin.",
+    },
+    {
+      icon: Cloud,
+      title: "Bulut ve Hibrit Altyapı",
+      description: "Azure bulut migrasyonu, hibrit çözümler ve altyapı optimizasyonu ile maliyetlerinizi düşürün.",
     },
     {
       icon: Settings,
       title: "Power Platform & Otomasyon",
-      description: "Microsoft Power Platform ile iş süreçlerinizi otomatikleştirin.",
-    },
-    {
-      icon: Cloud,
-      title: "Bulut Çözümleri",
-      description: "Güvenli ve ölçeklenebilir bulut altyapısı ile verimliliğinizi artırın.",
-    },
-    {
-      icon: BarChart3,
-      title: "Veri ve Raporlama",
-      description: "Power BI ve MS Fabric ile verilerinizi analiz edin ve görselleştirin.",
+      description: "Power Apps, Power Automate ve Power BI ile iş süreçlerinizi otomatikleştirin ve dijitalleştirin.",
     },
     {
       icon: Shield,
       title: "Siber Güvenlik",
-      description: "Dijital varlıklarınızı en güncel güvenlik çözümleriyle koruyun.",
+      description: "Kimlik yönetimi, tehdit koruması ve güvenlik operasyonları ile dijital varlıklarınızı koruyun.",
     },
     {
       icon: Smartphone,
-      title: "Mobil Uygulama Geliştirme",
-      description: "React Native ve Flutter ile modern mobil uygulamalar.",
+      title: "Mobil & Web Geliştirme",
+      description: "React Native, Flutter ve modern web teknolojileri ile platformlar arası uygulamalar geliştirin.",
     },
   ];
 
