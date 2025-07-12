@@ -1,73 +1,57 @@
-# Welcome to your Lovable project
+# KuzeyTech Frontend Hub
 
-## Project info
+Bu depo, KuzeyTech için geliştirilen modern ve duyarlı bir frontend projesidir.
 
-**URL**: https://lovable.dev/projects/6840a007-a474-447f-a8f1-b35e0153287d
+## Özellikler
 
-## How can I edit this code?
+- React ve TypeScript tabanlı
+- Shadcn UI bileşen kütüphanesi
+- Tailwind CSS ile hızlı stil geliştirme
+- Vite ile hızlı geliştirme ortamı
 
-There are several ways of editing your application.
+## Kurulum
 
-**Use Lovable**
+Projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları izleyin:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/6840a007-a474-447f-a8f1-b35e0153287d) and start prompting.
+1.  Depoyu klonlayın:
 
-Changes made via Lovable will be committed automatically to this repo.
+    ```bash
+    git clone https://github.com/mhmtalitas/kuzeytech.git
+    cd kuzeytech
+    ```
 
-**Use your preferred IDE**
+2.  Bağımlılıkları yükleyin:
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+    ```bash
+    npm install
+    ```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+3.  Geliştirme sunucusunu başlatın:
 
-Follow these steps:
+    ```bash
+    npm run dev
+    ```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Tarayıcınızda `http://localhost:8080` adresine giderek uygulamayı görüntüleyebilirsiniz.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## Proje Yapısı
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+src/
+├── assets/           # Statik dosyalar (resimler, ikonlar vb.)
+├── components/       # Yeniden kullanılabilir React bileşenleri
+├── lib/              # Yardımcı fonksiyonlar ve utility'ler
+├── pages/            # Uygulama sayfaları (Home, About, Services vb.)
+├── App.tsx           # Ana uygulama bileşeni ve router tanımı
+├── main.tsx          # Uygulama giriş noktası
+├── index.css         # Global CSS stilleri
+└── ...
 ```
 
-**Edit a file directly in GitHub**
+## Katkıda Bulunma
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Katkılarınızı bekliyoruz! Lütfen herhangi bir değişiklik yapmadan önce issue açın veya pull request gönderin.
 
-**Use GitHub Codespaces**
+## Lisans
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/6840a007-a474-447f-a8f1-b35e0153287d) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Bu proje MIT Lisansı altında lisanslanmıştır. Daha fazla bilgi için `LICENSE` dosyasına bakın. 

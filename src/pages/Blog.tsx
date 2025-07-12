@@ -5,6 +5,15 @@ import { Link } from "react-router-dom";
 import { Calendar, User, ArrowRight, Eye, Clock } from "lucide-react";
 
 const Blog = () => {
+  // Helper function to create a slug from a title
+  const createSlug = (title: string) => {
+    return title
+      .toLowerCase()
+      .replace(/[^a-z0-9\s-]/g, '') // Remove non-alphanumeric chars
+      .replace(/\s+/g, '-')        // Replace spaces with - 
+      .replace(/-+/g, '-');       // Replace multiple - with single - 
+  };
+
   const featuredPost = {
     title: "2024'te Yapay Zeka Trendleri: İşletmeler İçin Fırsatlar",
     excerpt: "Yapay zeka teknolojilerinin işletmelerdeki uygulamaları ve 2024 yılında beklenen gelişmeler hakkında kapsamlı bir analiz.",
@@ -13,7 +22,8 @@ const Blog = () => {
     category: "Yapay Zeka",
     readTime: "8 dk",
     views: "1,245",
-    image: "AI"
+    image: "AI",
+    slug: createSlug("2024'te Yapay Zeka Trendleri: İşletmeler İçin Fırsatlar")
   };
 
   const blogPosts = [
@@ -25,7 +35,8 @@ const Blog = () => {
       category: "Otomasyon",
       readTime: "6 dk",
       views: "892",
-      image: "PA"
+      image: "PA",
+      slug: createSlug("Power Platform ile İş Süreçlerinizi Nasıl Otomatikleştirirsiniz?")
     },
     {
       title: "Bulut Geçişinde Dikkat Edilmesi Gereken 10 Kritik Nokta",
@@ -35,7 +46,8 @@ const Blog = () => {
       category: "Bulut Teknolojileri",
       readTime: "10 dk",
       views: "1,156",
-      image: "CL"
+      image: "CL",
+      slug: createSlug("Bulut Geçişinde Dikkat Edilmesi Gereken 10 Kritik Nokta")
     },
     {
       title: "React Native vs Flutter: 2024'te Hangi Framework'ü Seçmelisiniz?",
@@ -45,7 +57,8 @@ const Blog = () => {
       category: "Mobil Geliştirme",
       readTime: "7 dk",
       views: "743",
-      image: "RN"
+      image: "RN",
+      slug: createSlug("React Native vs Flutter: 2024'te Hangi Framework'ü Seçmelisiniz?")
     },
     {
       title: "Siber Güvenlik: KOBİ'ler İçin Temel Önlemler",
@@ -55,7 +68,8 @@ const Blog = () => {
       category: "Siber Güvenlik",
       readTime: "5 dk",
       views: "658",
-      image: "CS"
+      image: "CS",
+      slug: createSlug("Siber Güvenlik: KOBİ'ler İçin Temel Önlemler")
     },
     {
       title: "Power BI ile Veri Görselleştirme: İleri Teknikler",
@@ -65,7 +79,8 @@ const Blog = () => {
       category: "Veri Analizi",
       readTime: "9 dk",
       views: "1,023",
-      image: "PB"
+      image: "PB",
+      slug: createSlug("Power BI ile Veri Görselleştirme: İleri Teknikler")
     },
     {
       title: "E-ticaret Sitesi SEO Optimizasyonu: Kapsamlı Rehber",
@@ -75,7 +90,8 @@ const Blog = () => {
       category: "SEO",
       readTime: "12 dk",
       views: "1,389",
-      image: "SE"
+      image: "SE",
+      slug: createSlug("E-ticaret Sitesi SEO Optimizasyonu: Kapsamlı Rehber")
     }
   ];
 
@@ -148,7 +164,7 @@ const Blog = () => {
                     </div>
                   </div>
                   <Button asChild>
-                    <Link to="#">
+                    <Link to={`/blog/${featuredPost.slug}`} state={{ post: featuredPost }}>
                       Devamını Oku
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
@@ -177,13 +193,13 @@ const Blog = () => {
                       </div>
                     </div>
                     <CardTitle className="text-primary hover:text-primary/80 transition-colors">
-                      <Link to="#" className="line-clamp-2">
+                      <Link to={`/blog/${post.slug}`} state={{ post }}>
                         {post.title}
                       </Link>
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <CardDescription className="text-base mb-4 line-clamp-3">
+                    <CardDescription className="text-base mb-4">
                       {post.excerpt}
                     </CardDescription>
                     <div className="flex items-center justify-between">
@@ -248,22 +264,46 @@ const Blog = () => {
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
-                  {blogPosts.slice(0, 3).map((post, index) => (
-                    <div key={index} className="border-b border-border last:border-0 pb-4 last:pb-0">
-                      <h4 className="font-medium text-sm text-primary hover:text-primary/80 transition-colors mb-2">
-                        <Link to="#" className="line-clamp-2">
-                          {post.title}
-                        </Link>
-                      </h4>
-                      <div className="flex items-center text-xs text-muted-foreground">
-                        <Calendar className="h-3 w-3 mr-1" />
-                        {post.date}
-                        <span className="mx-2">•</span>
-                        <Eye className="h-3 w-3 mr-1" />
-                        {post.views}
+                  {/* Example popular posts - replace with actual data */}
+                  <div className="flex items-center space-x-4">
+                    <div className="w-16 h-16 bg-secondary rounded-lg flex-shrink-0">
+                      {/* Image or icon */}
+                    </div>
+                    <div>
+                      <Link to="#" className="font-medium text-primary hover:text-primary/80 transition-colors line-clamp-2">
+                        Yapay Zeka Destekli Siber Güvenlik Çözümleri
+                      </Link>
+                      <div className="text-sm text-muted-foreground flex items-center mt-1">
+                        <Calendar className="h-3 w-3 mr-1" /> 28 Kasım 2024
                       </div>
                     </div>
-                  ))}
+                  </div>
+                  <div className="flex items-center space-x-4">
+                    <div className="w-16 h-16 bg-secondary rounded-lg flex-shrink-0">
+                      {/* Image or icon */}
+                    </div>
+                    <div>
+                      <Link to="#" className="font-medium text-primary hover:text-primary/80 transition-colors line-clamp-2">
+                        Microsoft Azure ile Maliyet Optimizasyonu Stratejileri
+                      </Link>
+                      <div className="text-sm text-muted-foreground flex items-center mt-1">
+                        <Calendar className="h-3 w-3 mr-1" /> 20 Kasım 2024
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex items-center space-x-4">
+                    <div className="w-16 h-16 bg-secondary rounded-lg flex-shrink-0">
+                      {/* Image or icon */}
+                    </div>
+                    <div>
+                      <Link to="#" className="font-medium text-primary hover:text-primary/80 transition-colors line-clamp-2">
+                        Dijital Pazarlamada Yeni Nesil Yaklaşımlar
+                      </Link>
+                      <div className="text-sm text-muted-foreground flex items-center mt-1">
+                        <Calendar className="h-3 w-3 mr-1" /> 10 Kasım 2024
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </CardContent>
             </Card>

@@ -9,10 +9,8 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="bg-background text-primary p-2 rounded-lg font-bold text-xl">
-                KT
-              </div>
-              <span className="font-bold text-xl">Kuzey Tech</span>
+              <img src="/kuzeytechlogo.png" alt="Kuzey Tech Logo" className="h-16 w-auto" />
+              <span className="font-bold text-xl">KuzeyTech</span>
             </div>
             <p className="text-primary-foreground/80">
               Geleceği şekillendiren teknoloji çözümlerinde uzman ekibimizle
@@ -84,7 +82,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />
-                <span className="text-primary-foreground/80">+90 XXX XXX XX XX</span>
+                <span className="text-primary-foreground/80">+90 534 052 00 00</span>
               </div>
             </div>
 

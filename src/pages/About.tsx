@@ -27,27 +27,27 @@ const About = () => {
 
   const team = [
     {
-      name: "Ahmet Kaya",
+      name: "Serkan Günaçtı",
       position: "Kurucu & CEO",
-      description: "15 yıllık yazılım geliştirme deneyimi",
-      image: "AK"
+      description: "15 Yıllık IT Deneyimi",
+      image: "SG"
     },
     {
-      name: "Elif Demir",
-      position: "CTO",
-      description: "Yapay zeka ve makine öğrenmesi uzmanı",
-      image: "ED"
+      name: "Mehmet Ali Taş",
+      position: "Yazılım Geliştirici",
+      description: "10 Yıl Deneyimli Yazılım Geliştirici",
+      image: "MT"
     },
     {
-      name: "Mehmet Şahin",
+      name: "Hami Kılıç",
       position: "Proje Müdürü",
-      description: "Bulut teknolojileri ve DevOps uzmanı",
-      image: "MŞ"
+      description: "Bulut Teknolojileri ve DevOps Uzmanı",
+      image: "HK"
     },
     {
       name: "Zeynep Yılmaz",
       position: "UX/UI Designer",
-      description: "Kullanıcı deneyimi ve tasarım uzmanı",
+      description: "Kullanıcı Deneyimi ve Tasarım Uzmanı",
       image: "ZY"
     }
   ];

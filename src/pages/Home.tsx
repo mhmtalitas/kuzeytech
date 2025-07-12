@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { Brain, Cloud, Shield, BarChart3, Settings, Smartphone, ArrowRight, Users } from "lucide-react";
+import CounterAnimation from "@/components/CounterAnimation";
 
 const Home = () => {
   const services = [
@@ -38,15 +39,20 @@ const Home = () => {
   ];
 
   const clients = [
-    "Microsoft", "Amazon", "Google", "Apple", "Meta", "Oracle"
+    { name: "Microsoft", logo: "https://upload.wikimedia.org/wikipedia/commons/0/0f/Microsoft_logo_-_2012_%28vertical%29.svg" },
+    { name: "Amazon", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" },
+    { name: "Google", logo: "https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" },
+    { name: "Apple", logo: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" },
+    { name: "Meta", logo: "/meta-logo.png" },
+    { name: "Oracle", logo: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Oracle_Logo.svg" },
   ];
 
   return (
-    <div className="min-h-screen">
+    <div>
       {/* Hero Section */}
       <section className="bg-gradient-hero text-primary-foreground py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center animate-fade-in">
+          <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Geleceği Şekillendiren
               <span className="block text-blue-200">Teknoloji Çözümleri</span>
@@ -56,14 +62,16 @@ const Home = () => {
               geniş bir yelpazede yenilikçi teknoloji hizmetleri sunuyoruz.
             </p>
             <div className="space-x-4">
-              <Button asChild size="lg" variant="secondary" className="animate-scale-in">
+              <Button asChild size="lg" variant="secondary">
                 <Link to="/hakkimizda">
                   Bizi Tanıyın
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                <Link to="/hizmetler">Hizmetlerimiz</Link>
+              <Button asChild size="lg" variant="outline" className="border-primary-foreground">
+                <Link to="/hizmetler">
+                  <span className="text-gray-900">Hizmetlerimiz</span>
+                </Link>
               </Button>
             </div>
           </div>
@@ -116,19 +124,27 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">100+</div>
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
+                <CounterAnimation targetValue={100} duration={2000} suffix="+" />
+              </div>
               <div className="text-muted-foreground">Tamamlanan Proje</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">50+</div>
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
+                <CounterAnimation targetValue={50} duration={2000} suffix="+" />
+              </div>
               <div className="text-muted-foreground">Mutlu Müşteri</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">5+</div>
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
+                <CounterAnimation targetValue={5} duration={2000} suffix="+" />
+              </div>
               <div className="text-muted-foreground">Yıllık Deneyim</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">24/7</div>
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
+                <CounterAnimation targetValue={24} duration={2000} suffix="/7" />
+              </div>
               <div className="text-muted-foreground">Teknik Destek</div>
             </div>
           </div>
@@ -151,7 +167,7 @@ const Home = () => {
             {clients.map((client, index) => (
               <div key={index} className="text-center">
                 <div className="bg-secondary rounded-lg p-6 flex items-center justify-center h-20">
-                  <span className="font-semibold text-primary">{client}</span>
+                  <img src={client.logo} alt={`${client.name} Logo`} className="h-full object-contain" />
                 </div>
               </div>
             ))}

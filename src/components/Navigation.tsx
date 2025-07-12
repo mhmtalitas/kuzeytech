@@ -13,22 +13,19 @@ const Navigation = () => {
     { name: "Hizmetler", path: "/hizmetler" },
     { name: "Ürünler", path: "/urunler" },
     { name: "Referanslar", path: "/referanslar" },
-    { name: "Blog", path: "/blog" },
     { name: "İletişim", path: "/iletisim" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="bg-background/95 backdrop-blur-md border-b sticky top-0 z-50 shadow-card">
+    <nav className="bg-background/95 border-b fixed !top-0 !important z-50 w-full translate-z-0">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="bg-gradient-primary text-primary-foreground p-2 rounded-lg font-bold text-xl">
-              KT
-            </div>
-            <span className="font-bold text-xl text-primary">Kuzey Tech</span>
+            <img src="/kuzeytechlogo.png" alt="Kuzey Tech Logo" className="h-16 w-auto" />
+            <span className="font-bold text-xl text-primary">KuzeyTech</span>
           </Link>
 
           {/* Desktop Menu */}
