@@ -192,12 +192,19 @@ const Home = () => {
           <p className="text-xl mb-8 text-primary-foreground/90 max-w-2xl mx-auto">
             Uzman ekibimizle birlikte işletmenizin dijital dönüşümünü başlatın ve rekabet avantajı kazanın.
           </p>
-          <Button asChild size="lg" variant="secondary">
-            <Link to="/iletisim">
-              Ücretsiz Danışmanlık Alın
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </Button>
+          <div className="flex flex-col space-y-4 md:flex-row md:space-x-4 md:space-y-0 items-center justify-center">
+            <Button asChild size="lg" variant="secondary" className="w-full md:w-auto">
+              <Link to="/iletisim">
+                Ücretsiz Danışmanlık Alın
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="border-primary-foreground w-full md:w-auto">
+              <Link to="/hizmetler">
+                <span className="text-gray-900">Hizmetlerimiz</span>
+              </Link>
+            </Button>
+          </div>
         </div>
       </section>
     </div>
