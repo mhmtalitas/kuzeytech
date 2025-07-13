@@ -112,7 +112,7 @@ const Footer = () => {
 
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center">
           <p className="text-primary-foreground/60">
-            © 2024 Kuzey Tech. Tüm hakları saklıdır.
+            © 2025 KuzeyTech. Tüm hakları saklıdır.
           </p>
         </div>
       </div>

@@ -69,9 +69,9 @@ const Home = () => {
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-primary-foreground">
+              <Button asChild size="lg" variant="outline">
                 <Link to="/hizmetler">
-                  <span className="text-gray-900">Hizmetlerimiz</span>
+                  Hizmetlerimiz
                 </Link>
               </Button>
             </div>
@@ -199,9 +199,9 @@ const Home = () => {
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-primary-foreground w-full md:w-auto">
+            <Button asChild size="lg" variant="outline" className="w-full md:w-auto">
               <Link to="/hizmetler">
-                <span className="text-gray-900">Hizmetlerimiz</span>
+                Hizmetlerimiz
               </Link>
             </Button>
           </div>

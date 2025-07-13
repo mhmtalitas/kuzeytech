@@ -62,7 +62,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Telefon",
-      details: ["+90 462 XXX XX XX", "+90 5XX XXX XX XX"]
+      details: ["+90 534 052 00 00"]
     },
     {
       icon: Mail,
@@ -72,7 +72,7 @@ const Contact = () => {
     {
       icon: Clock,
       title: "Çalışma Saatleri",
-      details: ["Pazartesi - Cuma: 09:00 - 18:00", "Cumartesi: 09:00 - 13:00"]
+      details: ["Pazartesi - Cuma: 09:00 - 18:00"]
     }
   ];
 
@@ -329,7 +329,7 @@ const Contact = () => {
                 Hemen Arayın
               </a>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+            <Button asChild size="lg" variant="outline" className="border-primary-foreground text-gray-900 hover:text-white">
               <a href="mailto:info@kuzeytech.com">
                 <Mail className="mr-2 h-4 w-4" />
                 E-posta Gönderin
