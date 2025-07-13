@@ -93,12 +93,10 @@ const Home = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => {
-              const [ref, isInView] = useScrollAnimation(0.2);
               return (
                 <Card
                   key={index}
-                  ref={ref}
-                  className={`shadow-card hover:shadow-corporate transition-all duration-300 hover:-translate-y-1 ${isInView ? "animate-fade-in-up" : "opacity-0"}`}
+                  className={`shadow-card hover:shadow-corporate transition-all duration-300 hover:-translate-y-1`}
                 >
                   <CardHeader>
                     <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center mb-4">
