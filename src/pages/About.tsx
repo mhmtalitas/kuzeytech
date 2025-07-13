@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Users, Target, Award, Heart } from "lucide-react";
 import CounterAnimation from "@/components/CounterAnimation"; // Import CounterAnimation
-import useScrollAnimation from "@/hooks/useScrollAnimation"; // Import useScrollAnimation
+// import useScrollAnimation from "@/hooks/useScrollAnimation"; // Kaldırıldı
 
 const About = () => {
   const values = [
@@ -127,28 +127,24 @@ const About = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {values.map((value, index) => {
-              const [ref, isInView] = useScrollAnimation(0.2);
-              return (
-                <Card
-                  key={index}
-                  ref={ref}
-                  className={`shadow-card hover:shadow-corporate transition-all duration-300 ${isInView ? "animate-fade-in-up" : "opacity-0"}`}
-                >
-                  <CardHeader>
-                    <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center mb-4">
-                      <value.icon className="h-6 w-6 text-primary-foreground" />
-                    </div>
-                    <CardTitle className="text-primary">{value.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-base">
-                      {value.description}
-                    </CardDescription>
-                  </CardContent>
-                </Card>
-              );
-            })}
+            {values.map((value, index) => (
+              <Card
+                key={index}
+                className={`shadow-card hover:shadow-corporate transition-all duration-300 hover:-translate-y-1`}
+              >
+                <CardHeader>
+                  <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center mb-4">
+                    <value.icon className="h-6 w-6 text-primary-foreground" />
+                  </div>
+                  <CardTitle className="text-primary">{value.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-base">
+                    {value.description}
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </section>
 

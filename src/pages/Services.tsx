@@ -5,7 +5,7 @@ import {
   Brain, Settings, Cloud, Shield, BarChart3, Key, 
   Users, Smartphone, Globe, ShoppingCart, Monitor, Wrench, ArrowRight 
 } from "lucide-react";
-import useScrollAnimation from "@/hooks/useScrollAnimation"; // Import useScrollAnimation
+// import useScrollAnimation from "@/hooks/useScrollAnimation"; // Kaldırıldı
 
 const Services = () => {
   const services = [
@@ -196,36 +196,32 @@ const Services = () => {
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {services.map((service, index) => {
-            const [ref, isInView] = useScrollAnimation(0.2);
-            return (
-              <Card
-                key={index}
-                ref={ref}
-                className={`shadow-card hover:shadow-corporate transition-all duration-300 hover:-translate-y-1 h-full ${isInView ? "animate-fade-in-up" : "opacity-0"}`}
-              >
-                <CardHeader>
-                  <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center mb-4">
-                    <service.icon className="h-6 w-6 text-primary-foreground" />
-                  </div>
-                  <CardTitle className="text-primary text-lg">{service.title}</CardTitle>
-                  <CardDescription className="text-base">
-                    {service.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="text-sm text-muted-foreground flex items-start">
-                        <span className="text-primary mr-2">•</span>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            );
-          })}
+          {services.map((service, index) => (
+            <Card
+              key={index}
+              className={`shadow-card hover:shadow-corporate transition-all duration-300 hover:-translate-y-1`}
+            >
+              <CardHeader>
+                <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center mb-4">
+                  <service.icon className="h-6 w-6 text-primary-foreground" />
+                </div>
+                <CardTitle className="text-primary text-lg">{service.title}</CardTitle>
+                <CardDescription className="text-base">
+                  {service.description}
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="text-sm text-muted-foreground flex items-start">
+                      <span className="text-primary mr-2">•</span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          ))}
         </div>
 
         {/* Process Section */}

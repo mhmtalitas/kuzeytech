@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { Calculator, FileText, Calendar, ArrowRight, Star, Eye, Users, Database } from "lucide-react";
-import useScrollAnimation from "@/hooks/useScrollAnimation"; // Import useScrollAnimation
+// import useScrollAnimation from "@/hooks/useScrollAnimation"; // Kaldırıldı
 
 const Products = () => {
   const products = [
@@ -127,14 +127,11 @@ const Products = () => {
 
         {/* Products Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {products.map((product, index) => {
-            const [ref, isInView] = useScrollAnimation(0.2);
-            return (
-              <Card
-                key={index}
-                ref={ref}
-                className={`shadow-card hover:shadow-corporate transition-all duration-300 hover:-translate-y-1 relative ${product.popular ? 'ring-2 ring-primary' : ''} ${isInView ? "animate-fade-in-up" : "opacity-0"}`}
-              >
+          {products.map((product, index) => (
+            <Card
+              key={index}
+              className={`shadow-card hover:shadow-corporate transition-all duration-300 hover:-translate-y-1 h-full`}
+            >
                 {product.popular && (
                   <Badge className="absolute -top-2 left-4 bg-primary text-primary-foreground">
                     Popüler
@@ -190,8 +187,7 @@ const Products = () => {
                   </div>
                 </CardContent>
               </Card>
-            );
-          })}
+          ))}
         </div>
 
         {/* Features Section */}

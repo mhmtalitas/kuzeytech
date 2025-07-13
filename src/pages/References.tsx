@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { Star, Quote, Building, Users, ArrowRight } from "lucide-react";
 import CounterAnimation from "@/components/CounterAnimation"; // Import CounterAnimation
-import useScrollAnimation from "@/hooks/useScrollAnimation"; // Import useScrollAnimation
+// import useScrollAnimation from "@/hooks/useScrollAnimation"; // Kaldırıldı
 
 const References = () => {
   const testimonials = [
@@ -163,14 +163,12 @@ const References = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => {
-              const [ref, isInView] = useScrollAnimation(0.2);
-              return (
-                <Card
-                  key={index}
-                  ref={ref}
-                  className={`shadow-card hover:shadow-corporate transition-all duration-300 ${isInView ? "animate-fade-in-up" : "opacity-0"}`}
-                >
+            {testimonials.map((testimonial, index) => (
+              <Card
+                key={index}
+                className={`shadow-card p-6 flex flex-col items-center text-center transition-all duration-300 hover:shadow-corporate hover:-translate-y-1`}
+              >
+                <Quote className="h-10 w-10 text-primary mb-4" />
                   <CardHeader>
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-center space-x-3">
@@ -203,8 +201,7 @@ const References = () => {
                     </div>
                   </CardContent>
                 </Card>
-              );
-            })}
+            ))}
           </div>
         </section>
 
@@ -220,14 +217,11 @@ const References = () => {
           </div>
 
           <div className="space-y-8">
-            {projects.map((project, index) => {
-              const [ref, isInView] = useScrollAnimation(0.2);
-              return (
-                <Card
-                  key={index}
-                  ref={ref}
-                  className={`shadow-card ${isInView ? "animate-fade-in-up" : "opacity-0"}`}
-                >
+            {projects.map((project, index) => (
+              <Card
+                key={index}
+                className={`shadow-card transition-all duration-300 hover:shadow-corporate hover:-translate-y-1`}
+              >
                   <CardHeader>
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between">
                       <div>
@@ -263,8 +257,7 @@ const References = () => {
                     </div>
                   </CardContent>
                 </Card>
-              );
-            })}
+            ))}
           </div>
         </section>
 
