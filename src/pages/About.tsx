@@ -1,5 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Users, Target, Award, Heart } from "lucide-react";
+import CounterAnimation from "@/components/CounterAnimation"; // Import CounterAnimation
+import useScrollAnimation from "@/hooks/useScrollAnimation"; // Import useScrollAnimation
 
 const About = () => {
   const values = [
@@ -94,19 +96,19 @@ const About = () => {
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
                   <span>Tamamlanan Projeler</span>
-                  <span className="font-bold text-2xl">100+</span>
+                  <span className="font-bold text-2xl"><CounterAnimation targetValue={100} duration={2000} suffix="+" /></span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span>Aktif Müşteriler</span>
-                  <span className="font-bold text-2xl">50+</span>
+                  <span className="font-bold text-2xl"><CounterAnimation targetValue={50} duration={2000} suffix="+" /></span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span>Ekip Üyeleri</span>
-                  <span className="font-bold text-2xl">15+</span>
+                  <span className="font-bold text-2xl"><CounterAnimation targetValue={15} duration={2000} suffix="+" /></span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span>Müşteri Memnuniyeti</span>
-                  <span className="font-bold text-2xl">98%</span>
+                  <span className="font-bold text-2xl"><CounterAnimation targetValue={98} duration={2000} suffix="%" /></span>
                 </div>
               </div>
             </div>
@@ -125,21 +127,28 @@ const About = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {values.map((value, index) => (
-              <Card key={index} className="shadow-card hover:shadow-corporate transition-all duration-300">
-                <CardHeader>
-                  <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center mb-4">
-                    <value.icon className="h-6 w-6 text-primary-foreground" />
-                  </div>
-                  <CardTitle className="text-primary">{value.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-base">
-                    {value.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            ))}
+            {values.map((value, index) => {
+              const [ref, isInView] = useScrollAnimation(0.2);
+              return (
+                <Card
+                  key={index}
+                  ref={ref}
+                  className={`shadow-card hover:shadow-corporate transition-all duration-300 ${isInView ? "animate-fade-in-up" : "opacity-0"}`}
+                >
+                  <CardHeader>
+                    <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center mb-4">
+                      <value.icon className="h-6 w-6 text-primary-foreground" />
+                    </div>
+                    <CardTitle className="text-primary">{value.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="text-base">
+                      {value.description}
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
         </section>
 

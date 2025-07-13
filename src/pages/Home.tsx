@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Link } from "react-router-dom";
 import { Brain, Cloud, Shield, BarChart3, Settings, Smartphone, ArrowRight, Users } from "lucide-react";
 import CounterAnimation from "@/components/CounterAnimation";
+import useScrollAnimation from "@/hooks/useScrollAnimation";
 
 const Home = () => {
   const services = [
@@ -91,21 +92,28 @@ const Home = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <Card key={index} className="shadow-card hover:shadow-corporate transition-all duration-300 hover:-translate-y-1">
-                <CardHeader>
-                  <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center mb-4">
-                    <service.icon className="h-6 w-6 text-primary-foreground" />
-                  </div>
-                  <CardTitle className="text-primary">{service.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-base">
-                    {service.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            ))}
+            {services.map((service, index) => {
+              const [ref, isInView] = useScrollAnimation(0.2);
+              return (
+                <Card
+                  key={index}
+                  ref={ref}
+                  className={`shadow-card hover:shadow-corporate transition-all duration-300 hover:-translate-y-1 ${isInView ? "animate-fade-in-up" : "opacity-0"}`}
+                >
+                  <CardHeader>
+                    <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center mb-4">
+                      <service.icon className="h-6 w-6 text-primary-foreground" />
+                    </div>
+                    <CardTitle className="text-primary">{service.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="text-base">
+                      {service.description}
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
 
           <div className="text-center mt-12">
