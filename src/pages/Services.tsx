@@ -291,12 +291,12 @@ const Services = () => {
           <div className="space-x-4">
             <Button asChild size="lg" variant="secondary">
               <Link to="/iletisim">
-                İletişime Geçin
+                Bizi Tanıyın
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
-            <Button asChild size="lg" variant="default" className="bg-primary-foreground hover:bg-primary-foreground/90">
-              <Link to="/products" className="text-black">Ürünlerimizi İnceleyin</Link>
+            <Button asChild size="lg" variant="outline">
+              <Link to="/products" className="text-gray-900">Ürünlerimizi İnceleyin</Link>
             </Button>
           </div>
         </section>
