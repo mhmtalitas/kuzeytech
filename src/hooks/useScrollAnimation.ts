@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, RefObject } from "react";
 
-const useScrollAnimation = (threshold = 0.1): [RefObject<HTMLDivElement>, boolean] => {
+const useScrollAnimation = (threshold = 0.5): [RefObject<HTMLDivElement>, boolean] => {
   const [isInView, setIsInView] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -10,7 +10,7 @@ const useScrollAnimation = (threshold = 0.1): [RefObject<HTMLDivElement>, boolea
         if (entry.isIntersecting) {
           setIsInView(true);
           // Optionally, unobserve once it's in view if animation should only play once
-          // observer.unobserve(entry.target);
+          observer.unobserve(entry.target);
         }
       },
       { threshold: threshold }
