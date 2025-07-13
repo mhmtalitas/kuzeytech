@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { Star, Quote, Building, Users, ArrowRight } from "lucide-react";
+import CounterAnimation from "@/components/CounterAnimation"; // Import CounterAnimation
+import useScrollAnimation from "@/hooks/useScrollAnimation"; // Import useScrollAnimation
 
 const References = () => {
   const testimonials = [
@@ -131,19 +133,19 @@ const References = () => {
         <section className="bg-gradient-primary rounded-lg p-8 md:p-12 text-primary-foreground mb-16">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-3xl md:text-4xl font-bold mb-2">100+</div>
+              <div className="text-3xl md:text-4xl font-bold mb-2"><CounterAnimation targetValue={100} duration={2000} suffix="+" /></div>
               <div className="text-primary-foreground/80">Tamamlanan Proje</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold mb-2">50+</div>
+              <div className="text-3xl md:text-4xl font-bold mb-2"><CounterAnimation targetValue={50} duration={2000} suffix="+" /></div>
               <div className="text-primary-foreground/80">Mutlu Müşteri</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold mb-2">98%</div>
+              <div className="text-3xl md:text-4xl font-bold mb-2"><CounterAnimation targetValue={98} duration={2000} suffix="%" /></div>
               <div className="text-primary-foreground/80">Müşteri Memnuniyeti</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold mb-2">5+</div>
+              <div className="text-3xl md:text-4xl font-bold mb-2"><CounterAnimation targetValue={5} duration={2000} suffix="+" /></div>
               <div className="text-primary-foreground/80">Yıl Deneyim</div>
             </div>
           </div>
@@ -161,41 +163,48 @@ const References = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="shadow-card hover:shadow-corporate transition-all duration-300">
-                <CardHeader>
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center">
-                        <span className="text-primary-foreground font-semibold text-sm">{testimonial.avatar}</span>
+            {testimonials.map((testimonial, index) => {
+              const [ref, isInView] = useScrollAnimation(0.2);
+              return (
+                <Card
+                  key={index}
+                  ref={ref}
+                  className={`shadow-card hover:shadow-corporate transition-all duration-300 ${isInView ? "animate-fade-in-up" : "opacity-0"}`}
+                >
+                  <CardHeader>
+                    <div className="flex items-start justify-between mb-4">
+                      <div className="flex items-center space-x-3">
+                        <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center">
+                          <span className="text-primary-foreground font-semibold text-sm">{testimonial.avatar}</span>
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-primary">{testimonial.name}</h3>
+                          <p className="text-sm text-muted-foreground">{testimonial.position}</p>
+                          <p className="text-sm font-medium">{testimonial.company}</p>
+                        </div>
                       </div>
-                      <div>
-                        <h3 className="font-semibold text-primary">{testimonial.name}</h3>
-                        <p className="text-sm text-muted-foreground">{testimonial.position}</p>
-                        <p className="text-sm font-medium">{testimonial.company}</p>
+                      <div className="flex">
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                          <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                        ))}
                       </div>
                     </div>
-                    <div className="flex">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                      ))}
+                    <div className="flex items-center space-x-2 mb-2">
+                      <Badge variant="secondary">{testimonial.project}</Badge>
+                      <Badge variant="outline">{testimonial.duration}</Badge>
                     </div>
-                  </div>
-                  <div className="flex items-center space-x-2 mb-2">
-                    <Badge variant="secondary">{testimonial.project}</Badge>
-                    <Badge variant="outline">{testimonial.duration}</Badge>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex items-start space-x-2">
-                    <Quote className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
-                    <p className="text-muted-foreground text-sm italic">
-                      {testimonial.comment}
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+                  </CardHeader>
+                  <CardContent>
+                    <div className="flex items-start space-x-2">
+                      <Quote className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
+                      <p className="text-muted-foreground text-sm italic">
+                        {testimonial.comment}
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
         </section>
 
@@ -211,90 +220,84 @@ const References = () => {
           </div>
 
           <div className="space-y-8">
-            {projects.map((project, index) => (
-              <Card key={index} className="shadow-card">
-                <CardHeader>
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-                    <div>
-                      <CardTitle className="text-primary text-xl mb-2">{project.title}</CardTitle>
-                      <CardDescription className="text-base mb-4">
-                        {project.description}
-                      </CardDescription>
+            {projects.map((project, index) => {
+              const [ref, isInView] = useScrollAnimation(0.2);
+              return (
+                <Card
+                  key={index}
+                  ref={ref}
+                  className={`shadow-card ${isInView ? "animate-fade-in-up" : "opacity-0"}`}
+                >
+                  <CardHeader>
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+                      <div>
+                        <CardTitle className="text-primary text-xl mb-2">{project.title}</CardTitle>
+                        <CardDescription className="text-base mb-4">
+                          {project.description}
+                        </CardDescription>
+                      </div>
+                      <Badge className="self-start md:self-center">{project.client}</Badge>
                     </div>
-                    <Badge className="self-start md:self-center">{project.client}</Badge>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <h4 className="font-semibold text-primary mb-2">Kullanılan Teknolojiler</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {project.technologies.map((tech, techIndex) => (
-                          <Badge key={techIndex} variant="outline">{tech}</Badge>
-                        ))}
+                  </CardHeader>
+                  <CardContent>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div>
+                        <h4 className="font-semibold text-primary mb-2">Kullanılan Teknolojiler</h4>
+                        <div className="flex flex-wrap gap-2">
+                          {project.technologies.map((tech, techIndex) => (
+                            <Badge key={techIndex} variant="outline">{tech}</Badge>
+                          ))}
+                        </div>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-primary mb-2">Elde Edilen Sonuçlar</h4>
+                        <ul className="space-y-1">
+                          {project.results.map((result, resultIndex) => (
+                            <li key={resultIndex} className="text-sm text-muted-foreground flex items-center">
+                              <span className="text-green-500 mr-2">✓</span>
+                              {result}
+                            </li>
+                          ))}
+                        </ul>
                       </div>
                     </div>
-                    <div>
-                      <h4 className="font-semibold text-primary mb-2">Elde Edilen Sonuçlar</h4>
-                      <ul className="space-y-1">
-                        {project.results.map((result, resultIndex) => (
-                          <li key={resultIndex} className="text-sm text-muted-foreground flex items-center">
-                            <span className="text-green-500 mr-2">✓</span>
-                            {result}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
         </section>
 
-        {/* Client Logos */}
-        <section className="mb-16">
-          <div className="text-center mb-12">
+        {/* Why Choose Us */}
+        <section className="mt-20 bg-secondary rounded-lg p-8 md:p-12">
+          <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-primary mb-4">
-              İş Ortaklarımız
+              Neden Kuzey Tech?
             </h2>
-            <p className="text-muted-foreground">
-              Farklı sektörlerden güvenilir firmalarla çalışıyoruz
-            </p>
           </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {clientLogos.map((client, index) => (
-              <Card key={index} className="text-center p-6 hover:shadow-card transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-primary rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Building className="h-8 w-8 text-primary-foreground" />
-                </div>
-                <h3 className="font-semibold text-primary text-sm mb-1">{client.name}</h3>
-                <p className="text-xs text-muted-foreground">{client.sector}</p>
-              </Card>
-            ))}
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="text-center bg-secondary rounded-lg p-8 md:p-12">
-          <h2 className="text-3xl font-bold text-primary mb-4">
-            Siz de Referanslarımıza Katılın
-          </h2>
-          <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Başarılı projelerimize bir yenisini ekleyelim. İşletmenizin dijital dönüşümünde 
-            güvenilir ortağınız olmaktan gurur duyarız.
-          </p>
-          <div className="space-x-4">
-            <Button asChild size="lg">
-              <Link to="/iletisim">
-                Projenizi Başlatın
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-            <Button asChild size="lg" variant="outline">
-              <Link to="/hizmetler">Hizmetlerimizi İnceleyin</Link>
-            </Button>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="text-4xl font-bold text-primary mb-2">5+</div>
+              <div className="font-medium mb-2">Yıllık Deneyim</div>
+              <p className="text-sm text-muted-foreground">
+                Sektördeki derin deneyimimizle güvenilir çözümler sunuyoruz
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-primary mb-2">24/7</div>
+              <div className="font-medium mb-2">Teknik Destek</div>
+              <p className="text-sm text-muted-foreground">
+                Kesintisiz teknik destek ile projelerinizin sürekliliğini sağlıyoruz
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-primary mb-2">100%</div>
+              <div className="font-medium mb-2">Müşteri Odaklılık</div>
+              <p className="text-sm text-muted-foreground">
+                Her projede müşteri ihtiyaçlarını önceleyerek özel çözümler geliştiriyoruz
+              </p>
+            </div>
           </div>
         </section>
       </div>

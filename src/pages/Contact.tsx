@@ -104,7 +104,7 @@ const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
           {/* Contact Form */}
           <div className="lg:col-span-2">
-            <Card className="shadow-corporate">
+            <Card className="shadow-corporate h-full flex flex-col">
               <CardHeader>
                 <CardTitle className="text-primary flex items-center">
                   <MessageSquare className="mr-2 h-5 w-5" />
@@ -211,35 +211,6 @@ const Contact = () => {
                 </CardContent>
               </Card>
             ))}
-
-            {/* Social Media */}
-            <Card className="shadow-card">
-              <CardHeader>
-                <CardTitle className="text-primary text-lg">Sosyal Medya</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="flex space-x-4">
-                  <a
-                    href="#"
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    <Facebook className="h-6 w-6" />
-                  </a>
-                  <a
-                    href="#"
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    <Twitter className="h-6 w-6" />
-                  </a>
-                  <a
-                    href="#"
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    <Linkedin className="h-6 w-6" />
-                  </a>
-                </div>
-              </CardContent>
-            </Card>
           </div>
         </div>
 

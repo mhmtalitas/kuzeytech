@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { Calculator, FileText, Calendar, ArrowRight, Star, Eye, Users, Database } from "lucide-react";
+import useScrollAnimation from "@/hooks/useScrollAnimation"; // Import useScrollAnimation
 
 const Products = () => {
   const products = [
@@ -126,64 +127,71 @@ const Products = () => {
 
         {/* Products Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {products.map((product, index) => (
-            <Card key={index} className={`shadow-card hover:shadow-corporate transition-all duration-300 hover:-translate-y-1 relative ${product.popular ? 'ring-2 ring-primary' : ''}`}>
-              {product.popular && (
-                <Badge className="absolute -top-2 left-4 bg-primary text-primary-foreground">
-                  Popüler
-                </Badge>
-              )}
-              
-              <CardHeader>
-                <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center">
-                    <product.icon className="h-6 w-6 text-primary-foreground" />
+          {products.map((product, index) => {
+            const [ref, isInView] = useScrollAnimation(0.2);
+            return (
+              <Card
+                key={index}
+                ref={ref}
+                className={`shadow-card hover:shadow-corporate transition-all duration-300 hover:-translate-y-1 relative ${product.popular ? 'ring-2 ring-primary' : ''} ${isInView ? "animate-fade-in-up" : "opacity-0"}`}
+              >
+                {product.popular && (
+                  <Badge className="absolute -top-2 left-4 bg-primary text-primary-foreground">
+                    Popüler
+                  </Badge>
+                )}
+                
+                <CardHeader>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center">
+                      <product.icon className="h-6 w-6 text-primary-foreground" />
+                    </div>
+                    <Badge variant="secondary">{product.category}</Badge>
                   </div>
-                  <Badge variant="secondary">{product.category}</Badge>
-                </div>
-                <CardTitle className="text-primary text-xl">{product.title}</CardTitle>
-                <CardDescription className="text-base">
-                  {product.description}
-                </CardDescription>
-              </CardHeader>
-              
-              <CardContent>
-                <div className="space-y-4">
-                  <ul className="space-y-2">
-                    {product.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="text-sm text-muted-foreground flex items-start">
-                        <span className="text-primary mr-2">✓</span>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <div className="pt-4 border-t">
-                    <div className="space-y-3">
-                      <Button className="w-full" asChild>
-                        <Link to={`/urun-detay/${product.slug}`}>
-                          <Eye className="mr-2 h-4 w-4" />
-                          Detayları İncele
-                        </Link>
-                      </Button>
-                      {product.demoAvailable && (
-                        <Button variant="outline" className="w-full" asChild>
-                          <Link to="/iletisim">
-                            Demo Talep Et
+                  <CardTitle className="text-primary text-xl">{product.title}</CardTitle>
+                  <CardDescription className="text-base">
+                    {product.description}
+                  </CardDescription>
+                </CardHeader>
+                
+                <CardContent>
+                  <div className="space-y-4">
+                    <ul className="space-y-2">
+                      {product.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="text-sm text-muted-foreground flex items-start">
+                          <span className="text-primary mr-2">✓</span>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                    
+                    <div className="pt-4 border-t">
+                      <div className="space-y-3">
+                        <Button className="w-full" asChild>
+                          <Link to={`/urun-detay/${product.slug}`}>
+                            <Eye className="mr-2 h-4 w-4" />
+                            Detayları İncele
                           </Link>
                         </Button>
-                      )}
-                      <Button variant="secondary" className="w-full" asChild>
-                        <Link to="/iletisim">
-                          Fiyat Teklifi Al
-                        </Link>
-                      </Button>
+                        {product.demoAvailable && (
+                          <Button variant="outline" className="w-full" asChild>
+                            <Link to="/iletisim">
+                              Demo Talep Et
+                            </Link>
+                          </Button>
+                        )}
+                        <Button variant="secondary" className="w-full" asChild>
+                          <Link to="/iletisim">
+                            Fiyat Teklifi Al
+                          </Link>
+                        </Button>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+                </CardContent>
+              </Card>
+            );
+          })}
         </div>
 
         {/* Features Section */}
