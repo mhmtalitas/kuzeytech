@@ -38,20 +38,28 @@ const Footer = () => {
                   Hizmetler
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   to="/urunler"
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
                 >
                   Ürünler
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link
                   to="/blog"
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
                 >
                   Blog
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/iletisim"
+                  className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                >
+                  İletişim
                 </Link>
               </li>
             </ul>
@@ -78,7 +86,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4" />
-                <span className="text-primary-foreground/80">info@kuzeytech.com</span>
+                <span className="text-primary-foreground/80">info@kuzeytech.net</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />

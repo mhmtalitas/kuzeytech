@@ -67,12 +67,12 @@ const Contact = () => {
     {
       icon: Mail,
       title: "E-posta",
-      details: ["info@kuzeytech.com", "destek@kuzeytech.com"]
+      details: ["info@kuzeytech.net"]
     },
     {
       icon: Clock,
       title: "Çalışma Saatleri",
-      details: ["Pazartesi - Cuma: 09:00 - 18:00"]
+      details: ["Pazartesi - Cuma: 10:00 - 17:00"]
     }
   ];
 
@@ -330,7 +330,7 @@ const Contact = () => {
               </a>
             </Button>
             <Button asChild size="lg" variant="outline" className="border-primary-foreground text-gray-900 hover:text-white">
-              <a href="mailto:info@kuzeytech.com">
+              <a href="mailto:info@kuzeytech.net">
                 <Mail className="mr-2 h-4 w-4" />
                 E-posta Gönderin
               </a>

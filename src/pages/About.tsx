@@ -41,16 +41,16 @@ const About = () => {
       image: "MT"
     },
     {
-      name: "Hami Kılıç",
-      position: "Proje Müdürü",
-      description: "Bulut Teknolojileri ve DevOps Uzmanı",
-      image: "HK"
+      name: "Mehmet Başkan",
+      position: "Teknik Operasyon Müdürü",
+      description: "Teknik Operasyon Yönetimi ve Sistem Uzmanı",
+      image: "MB"
     },
     {
-      name: "Zeynep Yılmaz",
-      position: "UX/UI Designer",
-      description: "Kullanıcı Deneyimi ve Tasarım Uzmanı",
-      image: "ZY"
+      name: "Osman Gülay",
+      position: "Satış Yöneticisi",
+      description: "Müşteri İlişkileri ve Satış Süreçleri Uzmanı",
+      image: "OG"
     }
   ];
 
@@ -96,11 +96,11 @@ const About = () => {
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
                   <span>Tamamlanan Projeler</span>
-                  <span className="font-bold text-2xl"><CounterAnimation targetValue={100} duration={2000} suffix="+" /></span>
+                  <span className="font-bold text-2xl"><CounterAnimation targetValue={50} duration={2000} suffix="+" /></span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span>Aktif Müşteriler</span>
-                  <span className="font-bold text-2xl"><CounterAnimation targetValue={50} duration={2000} suffix="+" /></span>
+                  <span className="font-bold text-2xl"><CounterAnimation targetValue={25} duration={2000} suffix="+" /></span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span>Ekip Üyeleri</span>
@@ -108,7 +108,7 @@ const About = () => {
                 </div>
                 <div className="flex justify-between items-center">
                   <span>Müşteri Memnuniyeti</span>
-                  <span className="font-bold text-2xl"><CounterAnimation targetValue={98} duration={2000} suffix="%" /></span>
+                  <span className="font-bold text-2xl"><CounterAnimation targetValue={99} duration={2000} suffix="%" /></span>
                 </div>
               </div>
             </div>
@@ -191,7 +191,7 @@ const About = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">5+</div>
+              <div className="text-4xl font-bold text-primary mb-2">2+</div>
               <div className="font-medium mb-2">Yıllık Deneyim</div>
               <p className="text-sm text-muted-foreground">
                 Sektördeki derin deneyimimizle güvenilir çözümler sunuyoruz

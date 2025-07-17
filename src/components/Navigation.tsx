@@ -11,8 +11,8 @@ const Navigation = () => {
     { name: "Anasayfa", path: "/" },
     { name: "Hakkımızda", path: "/hakkimizda" },
     { name: "Hizmetler", path: "/hizmetler" },
-    { name: "Ürünler", path: "/urunler" },
-    { name: "Referanslar", path: "/referanslar" },
+    // { name: "Ürünler", path: "/urunler" }, // Geçici olarak askıya alındı
+    // { name: "Referanslar", path: "/referanslar" }, // Geçici olarak askıya alındı
     { name: "İletişim", path: "/iletisim" },
   ];
 

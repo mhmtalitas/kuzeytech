@@ -14,7 +14,7 @@ const Home = () => {
     },
     {
       icon: Users,
-      title: "Modern Çalışma Ortamı",
+      title: "Microsoft Modern Work",
       description: "Microsoft 365, Teams entegrasyonu ve modern workplace çözümleri ile ekiplerinizi güçlendirin.",
     },
     {
@@ -131,19 +131,19 @@ const Home = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
-                <CounterAnimation targetValue={100} duration={2000} suffix="+" />
+                <CounterAnimation targetValue={50} duration={2000} suffix="+" />
               </div>
               <div className="text-muted-foreground">Tamamlanan Proje</div>
             </div>
             <div>
               <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
-                <CounterAnimation targetValue={50} duration={2000} suffix="+" />
+                <CounterAnimation targetValue={25} duration={2000} suffix="+" />
               </div>
               <div className="text-muted-foreground">Mutlu Müşteri</div>
             </div>
             <div>
               <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
-                <CounterAnimation targetValue={5} duration={2000} suffix="+" />
+                <CounterAnimation targetValue={2} duration={2000} suffix="+" />
               </div>
               <div className="text-muted-foreground">Yıllık Deneyim</div>
             </div>

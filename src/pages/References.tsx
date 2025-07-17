@@ -271,7 +271,7 @@ const References = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">5+</div>
+              <div className="text-4xl font-bold text-primary mb-2">2+</div>
               <div className="font-medium mb-2">Yıllık Deneyim</div>
               <p className="text-sm text-muted-foreground">
                 Sektördeki derin deneyimimizle güvenilir çözümler sunuyoruz

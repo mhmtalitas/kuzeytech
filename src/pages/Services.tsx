@@ -10,34 +10,21 @@ import {
 const Services = () => {
   const services = [
     {
-      icon: Brain,
-      title: "Yapay Zeka Çözümleri",
-      description: "İşletmenizin ihtiyaçlarına özel AI destekli çözümler geliştiriyoruz.",
+      icon: Key,
+      title: "Lisans ve E-Posta Yönetimi",
+      description: "Microsoft 365 ve yazılım lisanslarınızı optimize edin.",
       features: [
-        "Makine öğrenmesi algoritmaları",
-        "Doğal dil işleme",
-        "Görüntü tanıma ve analiz",
-        "Tahmine dayalı analitik",
-        "Chatbot ve sanal asistanlar",
-        "Özel AI modelleri geliştirme"
-      ]
-    },
-    {
-      icon: Settings,
-      title: "Power Platform ve Otomasyon",
-      description: "Microsoft Power Platform ile iş süreçlerinizi otomatikleştirin.",
-      features: [
-        "Power Apps ile özel uygulamalar",
-        "Power Automate ile iş akışları",
-        "Power BI ile veri görselleştirme",
-        "Power Virtual Agents chatbot",
-        "SharePoint entegrasyonu",
-        "Düşük kodlu uygulama geliştirme"
+        "Microsoft 365 yönetimi",
+        "Exchange Server çözümleri",
+        "Lisans optimizasyonu",
+        "E-posta güvenliği",
+        "Compliance ve arşivleme",
+        "Hybrid exchange yapılandırması"
       ]
     },
     {
       icon: Users,
-      title: "Modern Çalışma Ortamı (Modern Workplace)",
+      title: "Microsoft Modern Work",
       description: "Ekiplerinizin verimli ve güvenli çalışmasını sağlayan modern workplace çözümleri.",
       features: [
         "Microsoft 365 kurulumu ve yönetimi",
@@ -46,6 +33,32 @@ const Services = () => {
         "SharePoint ve OneDrive yönetimi",
         "Cihaz yönetimi (Microsoft Intune)",
         "Kullanıcı eğitimi ve değişim yönetimi"
+      ]
+    },
+    {
+      icon: Wrench,
+      title: "Teknik Destek ve Bakım",
+      description: "7/24 teknik destek ve sistem bakım hizmetleri.",
+      features: [
+        "Sistem izleme ve bakım",
+        "Güvenlik güncellemeleri",
+        "Performans optimizasyonu",
+        "Hata giderme",
+        "Kullanıcı eğitimleri",
+        "Proaktif sistem yönetimi"
+      ]
+    },
+    {
+      icon: Key,
+      title: "Yedekleme ve Felaket Kurtarma",
+      description: "İş sürekliliğinizi sağlayan güvenilir yedekleme ve kurtarma çözümleri.",
+      features: [
+        "Azure Backup çözümleri",
+        "Site Recovery planlaması",
+        "Disaster recovery stratejileri",
+        "Veri replikasyonu",
+        "İş sürekliliği planlaması",
+        "Recovery time optimization"
       ]
     },
     {
@@ -59,6 +72,58 @@ const Services = () => {
         "Maliyet optimizasyonu",
         "Performans izleme ve raporlama",
         "24/7 altyapı destek hizmetleri"
+      ]
+    },
+    {
+      icon: Brain,
+      title: "Yapay Zeka Çözümleri",
+      description: "İşletmenizin ihtiyaçlarına özel AI destekli çözümler geliştiriyoruz.",
+      features: [
+        "Makine öğrenmesi algoritmaları",
+        "Doğal dil işleme",
+        "Görüntü tanıma ve analiz",
+        "Tahmine dayalı analitik",
+        "Chatbot ve sanal asistanlar",
+        "Özel AI modelleri geliştirme"
+      ]
+    },
+    {
+      icon: Globe,
+      title: "Web Geliştirme",
+      description: "Modern, responsive ve SEO uyumlu web siteleri.",
+      features: [
+        "Kurumsal web siteleri",
+        "React, Vue.js, Angular",
+        "CMS çözümleri",
+        "SEO optimizasyonu",
+        "Web performans analizi",
+        "Progressive Web Apps (PWA)"
+      ]
+    },
+    {
+      icon: Smartphone,
+      title: "Mobil Uygulama Geliştirme",
+      description: "React Native ve Flutter ile cross-platform mobil uygulamalar.",
+      features: [
+        "iOS ve Android uygulamaları",
+        "React Native geliştirme",
+        "Flutter uygulamaları",
+        "Native uygulama geliştirme",
+        "App Store optimizasyonu",
+        "Mobil uygulama bakımı"
+      ]
+    },
+    {
+      icon: Settings,
+      title: "Power Platform ve Otomasyon",
+      description: "Microsoft Power Platform ile iş süreçlerinizi otomatikleştirin.",
+      features: [
+        "Power Apps ile özel uygulamalar",
+        "Power Automate ile iş akışları",
+        "Power BI ile veri görselleştirme",
+        "Power Virtual Agents chatbot",
+        "SharePoint entegrasyonu",
+        "Düşük kodlu uygulama geliştirme"
       ]
     },
     {
@@ -88,45 +153,6 @@ const Services = () => {
       ]
     },
     {
-      icon: Key,
-      title: "Yedekleme ve Felaket Kurtarma",
-      description: "İş sürekliliğinizi sağlayan güvenilir yedekleme ve kurtarma çözümleri.",
-      features: [
-        "Azure Backup çözümleri",
-        "Site Recovery planlaması",
-        "Disaster recovery stratejileri",
-        "Veri replikasyonu",
-        "İş sürekliliği planlaması",
-        "Recovery time optimization"
-      ]
-    },
-    {
-      icon: Key,
-      title: "Lisans ve E-Posta Yönetimi",
-      description: "Microsoft 365 ve yazılım lisanslarınızı optimize edin.",
-      features: [
-        "Microsoft 365 yönetimi",
-        "Exchange Server çözümleri",
-        "Lisans optimizasyonu",
-        "E-posta güvenliği",
-        "Compliance ve arşivleme",
-        "Hybrid exchange yapılandırması"
-      ]
-    },
-    {
-      icon: Globe,
-      title: "Web Geliştirme",
-      description: "Modern, responsive ve SEO uyumlu web siteleri.",
-      features: [
-        "Kurumsal web siteleri",
-        "React, Vue.js, Angular",
-        "CMS çözümleri",
-        "SEO optimizasyonu",
-        "Web performans analizi",
-        "Progressive Web Apps (PWA)"
-      ]
-    },
-    {
       icon: ShoppingCart,
       title: "E-ticaret Sistemleri",
       description: "Kapsamlı e-ticaret platformları ve entegrasyonları.",
@@ -140,19 +166,6 @@ const Services = () => {
       ]
     },
     {
-      icon: Smartphone,
-      title: "Mobil Uygulama Geliştirme",
-      description: "React Native ve Flutter ile cross-platform mobil uygulamalar.",
-      features: [
-        "iOS ve Android uygulamaları",
-        "React Native geliştirme",
-        "Flutter uygulamaları",
-        "Native uygulama geliştirme",
-        "App Store optimizasyonu",
-        "Mobil uygulama bakımı"
-      ]
-    },
-    {
       icon: Monitor,
       title: "Özel Yazılım Çözümleri",
       description: "İşletmenizin özel ihtiyaçları için yazılım geliştirme.",
@@ -163,19 +176,6 @@ const Services = () => {
         "Muhasebe yazılımları",
         "Özel ERP çözümleri",
         "API geliştirme ve entegrasyon"
-      ]
-    },
-    {
-      icon: Wrench,
-      title: "Teknik Destek ve Bakım",
-      description: "7/24 teknik destek ve sistem bakım hizmetleri.",
-      features: [
-        "Sistem izleme ve bakım",
-        "Güvenlik güncellemeleri",
-        "Performans optimizasyonu",
-        "Hata giderme",
-        "Kullanıcı eğitimleri",
-        "Proaktif sistem yönetimi"
       ]
     }
   ];
