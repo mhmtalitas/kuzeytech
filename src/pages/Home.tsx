@@ -1,16 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { Brain, Cloud, Shield, BarChart3, Settings, Smartphone, ArrowRight, Users } from "lucide-react";
+import { Brain, Cloud, Shield, BarChart3, Settings, Smartphone, ArrowRight, Users, Key, Wrench, HardDrive } from "lucide-react";
 import CounterAnimation from "@/components/CounterAnimation";
 import useScrollAnimation from "@/hooks/useScrollAnimation";
 
 const Home = () => {
   const services = [
     {
-      icon: Brain,
-      title: "Yapay Zeka Çözümleri",
-      description: "İşletmenizin ihtiyaçlarına özel AI destekli çözümler ve makine öğrenmesi modelleri geliştiriyoruz.",
+      icon: Key,
+      title: "Lisans ve E-Posta Yönetimi",
+      description: "Microsoft 365 ve yazılım lisanslarınızı optimize edin ve e-posta güvenliğinizi sağlayın.",
     },
     {
       icon: Users,
@@ -18,19 +18,19 @@ const Home = () => {
       description: "Microsoft 365, Teams entegrasyonu ve modern workplace çözümleri ile ekiplerinizi güçlendirin.",
     },
     {
-      icon: Cloud,
-      title: "Bulut ve Hibrit Altyapı",
-      description: "Azure bulut migrasyonu, hibrit çözümler ve altyapı optimizasyonu ile maliyetlerinizi düşürün.",
+      icon: Wrench,
+      title: "Teknik Destek ve Bakım",
+      description: "7/24 teknik destek ve sistem bakım hizmetleri ile kesintisiz operasyonlar sağlayın.",
     },
     {
-      icon: Settings,
-      title: "Power Platform & Otomasyon",
-      description: "Power Apps, Power Automate ve Power BI ile iş süreçlerinizi otomatikleştirin ve dijitalleştirin.",
+      icon: HardDrive,
+      title: "Yedekleme ve Felaket Kurtarma",
+      description: "İş sürekliliğinizi sağlayan güvenilir yedekleme ve kurtarma çözümleri sunarız.",
     },
     {
-      icon: Shield,
-      title: "Siber Güvenlik",
-      description: "Kimlik yönetimi, tehdit koruması ve güvenlik operasyonları ile dijital varlıklarınızı koruyun.",
+      icon: Brain,
+      title: "Yapay Zeka Çözümleri",
+      description: "İşletmenizin ihtiyaçlarına özel AI destekli çözümler ve makine öğrenmesi modelleri geliştiriyoruz.",
     },
     {
       icon: Smartphone,

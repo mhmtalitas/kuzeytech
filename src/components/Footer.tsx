@@ -69,10 +69,11 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="font-semibold text-lg">Hizmetlerimiz</h3>
             <ul className="space-y-2">
-              <li className="text-primary-foreground/80">Yapay Zeka Çözümleri</li>
-              <li className="text-primary-foreground/80">Power Platform</li>
-              <li className="text-primary-foreground/80">Bulut Çözümleri</li>
-              <li className="text-primary-foreground/80">Web Geliştirme</li>
+              <li className="text-primary-foreground/80">Lisans ve E-Posta Yönetimi</li>
+              <li className="text-primary-foreground/80">Microsoft Modern Work</li>
+              <li className="text-primary-foreground/80">Teknik Destek ve Bakım</li>
+              <li className="text-primary-foreground/80">Yedekleme ve Felaket Kurtarma</li>
+              <li className="text-primary-foreground/80">Mobil & Web Geliştirme</li>
             </ul>
           </div>
 

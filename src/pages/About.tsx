@@ -63,7 +63,7 @@ const About = () => {
             Kuzey Tech Hakkında
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            2019 yılında Trabzon'da kurulan Kuzey Tech, teknoloji alanında yenilikçi çözümler üreten 
+            2025 yılında Trabzon'da kurulan Kuzey Tech, teknoloji alanında yenilikçi çözümler üreten 
             dinamik bir şirkettir. Müşterilerimizin dijital dönüşüm yolculuğunda güvenilir ortağı olmanın 
             gururunu yaşıyoruz.
           </p>
@@ -77,7 +77,7 @@ const About = () => {
               <div className="space-y-4 text-muted-foreground">
                 <p>
                   Kuzey Tech, teknolojinin hızla geliştiği bir dönemde, işletmelerin bu değişime 
-                  ayak uydurmasına yardımcı olmak amacıyla kuruldu. Trabzon'un güçlü teknoloji 
+                  ayak uydurmasına yardımcı olmak amacıyla kuruldu. Karadeniz'in güçlü teknoloji 
                   ekosisteminden yola çıkarak, önce yerel sonra ulusal ölçekte hizmet vermeye başladık.
                 </p>
                 <p>

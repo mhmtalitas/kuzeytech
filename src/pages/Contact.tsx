@@ -278,8 +278,8 @@ const Contact = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Projeler genellikle %30 ön ödeme, %40 proje ortası ve %30 teslimat olmak üzere 
-                  3 taksit halinde ödenebilir. Küçük projeler için tek ödeme seçeneği de mevcuttur.
+                  Kredi kartı ve banka havalesi ile ödeme kabul edilir. 
+                  Fatura ve gerekli belgeler proje başlangıcında düzenlenir.
                 </p>
               </CardContent>
             </Card>
@@ -292,7 +292,7 @@ const Contact = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Evet, tüm projelerimizde 6 ay ücretsiz destek hizmeti veriyoruz. 
+                  Evet, tüm projelerimizde 1 ay ücretsiz destek hizmeti veriyoruz. 
                   Sonrasında aylık veya yıllık destek paketlerimiz mevcuttur.
                 </p>
               </CardContent>
