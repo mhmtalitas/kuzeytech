@@ -227,8 +227,7 @@ const Contact = () => {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="space-y-6">
-                {/* Google Maps Embed */}
+                              {/* Google Maps Embed */}
                 <div className="relative w-full h-96 rounded-lg overflow-hidden">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3018.4892474892474!2d39.2176199!3d41.0591552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4064757fb0f6cba1%3A0x95acc75ed2fd9f14!2sKuzey%20Tech%20Bilgi%20Teknolojileri%20Tic.%20Ltd.%20%C5%9Eti!5e0!3m2!1str!2str!4v1635959999999!5m2!1str!2str"
@@ -241,26 +240,6 @@ const Contact = () => {
                     title="Kuzey Tech Ofis Konumu"
                   ></iframe>
                 </div>
-                
-                {/* Address Info */}
-                <div className="bg-gradient-primary rounded-lg p-6 text-primary-foreground">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-primary-foreground/20 rounded-full flex items-center justify-center flex-shrink-0">
-                      <MapPin className="h-6 w-6" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold mb-2">Kuzey Tech Ofisi</h3>
-                      <p className="text-primary-foreground/90 mb-2">
-                        Çeşmeönü Mah. Alpaslan Türkeş Cd.<br />
-                        No:32/A, 61800 Beşikdüzü/Trabzon
-                      </p>
-                      <p className="text-sm text-primary-foreground/70">
-                        Ofis ziyareti için önceden randevu almanız önerilir.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </CardContent>
           </Card>
         </section>
