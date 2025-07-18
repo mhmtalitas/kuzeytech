@@ -284,15 +284,12 @@ const Services = () => {
             Hangi hizmete ihtiyacınız olduğundan emin değil misiniz? 
             Uzman ekibimizle görüşerek size en uygun çözümü belirleyelim.
           </p>
-          <div className="flex flex-col space-y-4 md:flex-row md:space-x-4 md:space-y-0 items-center justify-center">
+          <div className="flex justify-center">
             <Button asChild size="lg" variant="secondary" className="w-full md:w-auto">
               <Link to="/iletisim">
                 Bizi Tanıyın
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="w-full md:w-auto">
-              <Link to="/products" className="text-gray-900">Ürünlerimizi İnceleyin</Link>
             </Button>
           </div>
         </section>
