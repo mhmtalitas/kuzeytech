@@ -44,7 +44,7 @@ const Home = () => {
     { name: "Acronis", logo: "/acronis.png" },
     { name: "Trend Micro", logo: "/trendmicro.png" },
     { name: "Veeam", logo: "/veeam.png" },
-    { name: "Lenovo", logo: "https://upload.wikimedia.org/wikipedia/commons/b/b8/Lenovo_logo.svg" },
+    { name: "Lenovo", logo: "/lenovo.png" },
     { name: "Asus", logo: "https://upload.wikimedia.org/wikipedia/commons/2/2e/ASUS_Logo.svg" },
     { name: "HP", logo: "https://upload.wikimedia.org/wikipedia/commons/a/ad/HP_logo_2012.svg" },
     { name: "SAP", logo: "https://upload.wikimedia.org/wikipedia/commons/5/59/SAP_2011_logo.svg" },
