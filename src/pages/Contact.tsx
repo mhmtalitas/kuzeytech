@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Mail, Phone, MapPin, Clock, Send, MessageSquare, Facebook, Twitter, Linkedin } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const { toast } = useToast();
@@ -24,7 +25,7 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     // Form validation
@@ -37,20 +38,47 @@ const Contact = () => {
       return;
     }
 
-    // Simulate form submission
-    toast({
-      title: "Mesajınız Gönderildi!",
-      description: "En kısa sürede size geri dönüş yapacağız.",
-    });
+    try {
+      // EmailJS ile mail gönderme
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        company: formData.company,
+        subject: formData.subject,
+        message: formData.message,
+        to_email: "info@kuzeytech.net"
+      };
 
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      company: "",
-      subject: "",
-      message: ""
-    });
+      // EmailJS ayarları - Bu değerleri EmailJS dashboard'dan alın
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || "YOUR_SERVICE_ID";
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "YOUR_TEMPLATE_ID";
+      const userId = import.meta.env.VITE_EMAILJS_USER_ID || "YOUR_USER_ID";
+
+      await emailjs.send(serviceId, templateId, templateParams, userId);
+
+      // Başarılı mesaj
+      toast({
+        title: "Mesajınız Gönderildi! ✅",
+        description: "En kısa sürede size geri dönüş yapacağız.",
+      });
+
+      // Form sıfırlama
+      setFormData({
+        name: "",
+        email: "",
+        company: "",
+        subject: "",
+        message: ""
+      });
+
+    } catch (error) {
+      console.error("Mail gönderme hatası:", error);
+      toast({
+        title: "Hata ❌",
+        description: "Mesaj gönderilirken bir hata oluştu. Lütfen tekrar deneyiniz.",
+        variant: "destructive"
+      });
+    }
   };
 
   const contactInfo = [
