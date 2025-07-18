@@ -81,9 +81,12 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="font-semibold text-lg">İletişim</h3>
             <div className="space-y-3">
-              <div className="flex items-center space-x-2">
-                <MapPin className="h-4 w-4" />
-                <span className="text-primary-foreground/80">Beşikdüzü, Trabzon</span>
+              <div className="flex items-start space-x-2">
+                <MapPin className="h-4 w-4 mt-1 flex-shrink-0" />
+                <div className="text-primary-foreground/80">
+                  <div>Çeşmeönü Mah. Alpaslan Türkeş Cd.</div>
+                  <div>No:32/A, 61800 Beşikdüzü/Trabzon</div>
+                </div>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4" />
@@ -121,7 +124,7 @@ const Footer = () => {
 
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center">
           <p className="text-primary-foreground/60">
-            © 2025 KuzeyTech. Tüm hakları saklıdır.
+            © 2025 Kuzey Tech. Tüm hakları saklıdır.
           </p>
         </div>
       </div>
