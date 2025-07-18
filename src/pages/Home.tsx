@@ -42,7 +42,7 @@ const Home = () => {
   const clients = [
     { name: "Microsoft", logo: "https://upload.wikimedia.org/wikipedia/commons/0/0f/Microsoft_logo_-_2012_%28vertical%29.svg" },
     { name: "Acronis", logo: "/acronis.png" },
-    { name: "Trend Micro", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a2/Trend_Micro_logo.svg" },
+    { name: "Trend Micro", logo: "/trendmicro.png" },
     { name: "Veeam", logo: "https://upload.wikimedia.org/wikipedia/commons/8/8a/Veeam_logo.svg" },
     { name: "Lenovo", logo: "https://upload.wikimedia.org/wikipedia/commons/b/b8/Lenovo_logo.svg" },
     { name: "Asus", logo: "https://upload.wikimedia.org/wikipedia/commons/2/2e/ASUS_Logo.svg" },
