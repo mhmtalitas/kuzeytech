@@ -41,11 +41,15 @@ const Home = () => {
 
   const clients = [
     { name: "Microsoft", logo: "https://upload.wikimedia.org/wikipedia/commons/0/0f/Microsoft_logo_-_2012_%28vertical%29.svg" },
-    { name: "Amazon", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" },
-    { name: "Google", logo: "https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" },
-    { name: "Apple", logo: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" },
-    { name: "Meta", logo: "/meta-logo.png" },
-    { name: "Oracle", logo: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Oracle_Logo.svg" },
+    { name: "Acronis", logo: "/acronis.png" },
+    { name: "Trend Micro", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a2/Trend_Micro_logo.svg" },
+    { name: "Veeam", logo: "https://upload.wikimedia.org/wikipedia/commons/8/8a/Veeam_logo.svg" },
+    { name: "Lenovo", logo: "https://upload.wikimedia.org/wikipedia/commons/b/b8/Lenovo_logo.svg" },
+    { name: "Asus", logo: "https://upload.wikimedia.org/wikipedia/commons/2/2e/ASUS_Logo.svg" },
+    { name: "HP", logo: "https://upload.wikimedia.org/wikipedia/commons/a/ad/HP_logo_2012.svg" },
+    { name: "SAP", logo: "https://upload.wikimedia.org/wikipedia/commons/5/59/SAP_2011_logo.svg" },
+    { name: "Hikvision", logo: "https://upload.wikimedia.org/wikipedia/commons/f/f2/Hikvision_logo.svg" },
+    { name: "TP-Link", logo: "https://upload.wikimedia.org/wikipedia/commons/b/bb/TP-Link_logo.svg" },
   ];
 
   return (
@@ -169,14 +173,25 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center opacity-60">
-            {clients.map((client, index) => (
-              <div key={index} className="text-center">
-                <div className="bg-secondary rounded-lg p-6 flex items-center justify-center h-20">
-                  <img src={client.logo} alt={`${client.name} Logo`} className="h-full object-contain" />
+          <div className="overflow-hidden">
+            <div className="flex animate-scroll">
+              {/* İlk set */}
+              {clients.map((client, index) => (
+                <div key={index} className="flex-shrink-0 w-48 px-4">
+                  <div className="bg-secondary rounded-lg p-6 flex items-center justify-center h-20 opacity-60 hover:opacity-80 transition-opacity">
+                    <img src={client.logo} alt={`${client.name} Logo`} className="h-full object-contain" />
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+              {/* Duplicate set for seamless loop */}
+              {clients.map((client, index) => (
+                <div key={`duplicate-${index}`} className="flex-shrink-0 w-48 px-4">
+                  <div className="bg-secondary rounded-lg p-6 flex items-center justify-center h-20 opacity-60 hover:opacity-80 transition-opacity">
+                    <img src={client.logo} alt={`${client.name} Logo`} className="h-full object-contain" />
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
