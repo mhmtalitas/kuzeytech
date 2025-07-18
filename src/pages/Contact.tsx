@@ -57,7 +57,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Adres",
-      details: ["Kuzey Tech Bilgi Teknolojileri", "Trabzon, Türkiye"]
+      details: ["Çeşmeönü Mah. Alpaslan Türkeş Cd.", "No:32/A, 61800 Beşikdüzü/Trabzon"]
     },
     {
       icon: Phone,
@@ -251,8 +251,8 @@ const Contact = () => {
                     <div>
                       <h3 className="text-xl font-semibold mb-2">Kuzey Tech Ofisi</h3>
                       <p className="text-primary-foreground/90 mb-2">
-                        Kuzey Tech Bilgi Teknolojileri Tic. Ltd. Şti<br />
-                        Trabzon, Türkiye
+                        Çeşmeönü Mah. Alpaslan Türkeş Cd.<br />
+                        No:32/A, 61800 Beşikdüzü/Trabzon
                       </p>
                       <p className="text-sm text-primary-foreground/70">
                         Ofis ziyareti için önceden randevu almanız önerilir.
