@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <img src="/kuzeytechlogo.png" alt="Kuzey Tech Logo" className="h-16 w-auto" />
-              <span className="font-bold text-xl">KuzeyTech</span>
+              <span className="font-bold text-xl">Kuzey Tech</span>
             </div>
             <p className="text-primary-foreground/80">
               Geleceği şekillendiren teknoloji çözümlerinde uzman ekibimizle

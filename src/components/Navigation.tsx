@@ -25,7 +25,7 @@ const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <img src="/kuzeytechlogo.png" alt="Kuzey Tech Logo" className="h-16 w-auto" />
-            <span className="font-bold text-xl text-primary">KuzeyTech</span>
+            <span className="font-bold text-xl text-primary">Kuzey Tech</span>
           </Link>
 
           {/* Desktop Menu */}
