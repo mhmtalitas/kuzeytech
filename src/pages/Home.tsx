@@ -47,7 +47,7 @@ const Home = () => {
     { name: "Lenovo", logo: "/lenovo.png" },
     { name: "Asus", logo: "https://upload.wikimedia.org/wikipedia/commons/2/2e/ASUS_Logo.svg" },
     { name: "HP", logo: "https://upload.wikimedia.org/wikipedia/commons/a/ad/HP_logo_2012.svg" },
-    { name: "SAP", logo: "https://upload.wikimedia.org/wikipedia/commons/5/59/SAP_2011_logo.svg" },
+    { name: "SAP", logo: "/sap.png" },
     { name: "Hikvision", logo: "/hikvision.png" },
     { name: "TP-Link", logo: "/tplink.png" },
   ];
