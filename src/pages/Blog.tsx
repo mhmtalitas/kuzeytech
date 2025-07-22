@@ -15,68 +15,68 @@ const Blog = () => {
   };
 
   const featuredPost = {
-    title: "2024'te Yapay Zeka Trendleri: İşletmeler İçin Fırsatlar",
-    excerpt: "Yapay zeka teknolojilerinin işletmelerdeki uygulamaları ve 2024 yılında beklenen gelişmeler hakkında kapsamlı bir analiz.",
-    author: "Ahmet Kaya",
+    title: "Microsoft Copilot ve AI Agents ile Dijital Dönüşüm: Başarı Hikayesi",
+    excerpt: "Trabzon'da Microsoft Copilot implementasyonu ile %40 verimlilik artışı sağlayan işletmelerin deneyimleri. Yapay zeka danışmanlığı süreçleri ve Microsoft Azure entegrasyonu başarı hikayeleri.",
+    author: "Ahmet Kaya - Microsoft Certified Expert",
     date: "15 Aralık 2024",
-    category: "Yapay Zeka",
+    category: "Microsoft Copilot ve Yapay Zeka",
     readTime: "8 dk",
     views: "1,245",
     image: "AI",
-    slug: createSlug("2024'te Yapay Zeka Trendleri: İşletmeler İçin Fırsatlar")
+    slug: createSlug("Microsoft Copilot ve AI Agents ile Dijital Dönüşüm: Başarı Hikayesi")
   };
 
   const blogPosts = [
     {
-      title: "Power Platform ile İş Süreçlerinizi Nasıl Otomatikleştirirsiniz?",
-      excerpt: "Microsoft Power Platform araçlarını kullanarak manuel iş süreçlerinizi otomatikleştirmenin yolları.",
-      author: "Elif Demir",
+      title: "Power Platform Geliştirme: PowerApps ve Power Automate ile Kurumsal Otomasyon",
+      excerpt: "Microsoft Power Platform, PowerApps ve Power Automate kullanarak kurumsal iş süreçlerini otomatikleştirme rehberi. Low-code/no-code çözümlerle verimlilik artışı sağlayın.",
+      author: "Elif Demir - Power Platform Specialist",
       date: "12 Aralık 2024",
-      category: "Otomasyon",
+      category: "Power Platform ve PowerApps",
       readTime: "6 dk",
       views: "892",
       image: "PA",
-      slug: createSlug("Power Platform ile İş Süreçlerinizi Nasıl Otomatikleştirirsiniz?")
+      slug: createSlug("Power Platform Geliştirme: PowerApps ve Power Automate ile Kurumsal Otomasyon")
     },
     {
-      title: "Bulut Geçişinde Dikkat Edilmesi Gereken 10 Kritik Nokta",
-      excerpt: "Azure veya AWS'ye geçiş yaparken dikkat etmeniz gereken önemli faktörler ve en iyi pratikler.",
-      author: "Mehmet Şahin",
+      title: "Microsoft Azure Danışmanlığı: Bulut Bilişim Geçişinde 10 Kritik Başarı Faktörü",
+      excerpt: "Microsoft Azure bulut bilişim çözümlerine geçiş sürecinde dikkat edilmesi gereken kritik noktalar. Azure danışmanlığı ile hibrit altyapı kurulumu en iyi pratikleri.",
+      author: "Mehmet Şahin - Azure Solutions Architect",
       date: "10 Aralık 2024",
-      category: "Bulut Teknolojileri",
+      category: "Microsoft Azure ve Bulut Teknolojileri",
       readTime: "10 dk",
       views: "1,156",
       image: "CL",
-      slug: createSlug("Bulut Geçişinde Dikkat Edilmesi Gereken 10 Kritik Nokta")
+      slug: createSlug("Microsoft Azure Danışmanlığı: Bulut Bilişim Geçişinde 10 Kritik Başarı Faktörü")
     },
     {
-      title: "React Native vs Flutter: 2024'te Hangi Framework'ü Seçmelisiniz?",
-      excerpt: "Mobil uygulama geliştirmede iki popüler framework'ün detaylı karşılaştırması.",
-      author: "Zeynep Yılmaz",
+      title: "Trabzon Mobil Uygulama Geliştirme: React Native vs Flutter Karşılaştırması",
+      excerpt: "Mobil uygulama geliştirme framework seçiminde React Native ve Flutter detaylı karşılaştırması. Cross-platform mobil çözümler için uzman önerileri.",
+      author: "Zeynep Yılmaz - Mobile Developer",
       date: "8 Aralık 2024",
-      category: "Mobil Geliştirme",
+      category: "Web Yazılım Geliştirme",
       readTime: "7 dk",
       views: "743",
       image: "RN",
-      slug: createSlug("React Native vs Flutter: 2024'te Hangi Framework'ü Seçmelisiniz?")
+      slug: createSlug("Trabzon Mobil Uygulama Geliştirme: React Native vs Flutter Karşılaştırması")
     },
     {
-      title: "Siber Güvenlik: KOBİ'ler İçin Temel Önlemler",
-      excerpt: "Küçük ve orta ölçekli işletmelerin siber tehditlere karşı alması gereken temel güvenlik önlemleri.",
-      author: "Can Özkan",
+      title: "Siber Güvenlik Yazılımı ve Microsoft Defender: KOBİ'ler İçin Koruma Stratejileri",
+      excerpt: "Trabzon ve Karadeniz bölgesi KOBİ'leri için siber güvenlik yazılımı çözümleri ve Microsoft Defender implementasyonu. Azure Security Center ile kurumsal güvenlik.",
+      author: "Can Özkan - Cybersecurity Specialist",
       date: "5 Aralık 2024",
-      category: "Siber Güvenlik",
+      category: "Siber Güvenlik Yazılımı",
       readTime: "5 dk",
       views: "658",
       image: "CS",
-      slug: createSlug("Siber Güvenlik: KOBİ'ler İçin Temel Önlemler")
+      slug: createSlug("Siber Güvenlik Yazılımı ve Microsoft Defender: KOBİ'ler İçin Koruma Stratejileri")
     },
     {
-      title: "Power BI ile Veri Görselleştirme: İleri Teknikler",
-      excerpt: "Power BI'da etkileyici ve anlamlı veri görselleştirmeleri oluşturmak için uzman ipuçları.",
-      author: "Fatma Arslan",
+      title: "Power BI ve Veri Analizi: Raporlama Sistemleri ile İş Zekası Çözümleri",
+      excerpt: "Microsoft Power BI ile veri analizi yazılımı ve raporlama sistemlerinin kurumsal kullanımı. İş zekası (Business Intelligence) uygulamaları ve veri yönetimi stratejileri.",
+      author: "Fatma Arslan - BI Consultant",
       date: "3 Aralık 2024",
-      category: "Veri Analizi",
+      category: "Power BI ve Veri Analizi",
       readTime: "9 dk",
       views: "1,023",
       image: "PB",
@@ -96,14 +96,17 @@ const Blog = () => {
   ];
 
   const categories = [
-    { name: "Yapay Zeka", count: 15 },
-    { name: "Bulut Teknolojileri", count: 12 },
-    { name: "Mobil Geliştirme", count: 10 },
-    { name: "Veri Analizi", count: 8 },
-    { name: "Siber Güvenlik", count: 6 },
-    { name: "Otomasyon", count: 9 },
-    { name: "SEO", count: 5 },
-    { name: "Web Geliştirme", count: 11 }
+    { name: "Microsoft Copilot ve Yapay Zeka", count: 15 },
+    { name: "Microsoft Azure ve Bulut Teknolojileri", count: 12 },
+    { name: "Power Platform ve PowerApps", count: 14 },
+    { name: "Microsoft Teams ve Office", count: 13 },
+    { name: "Power BI ve Veri Analizi", count: 8 },
+    { name: "Web Yazılım Geliştirme", count: 11 },
+    { name: "Siber Güvenlik Yazılımı", count: 6 },
+    { name: "Power Automate ve Otomasyon", count: 9 },
+    { name: "Başarı Hikayeleri", count: 7 },
+    { name: "Sertifikalar ve Yetkinlikler", count: 4 },
+    { name: "Kurumsal SEO Danışmanlığı", count: 5 }
   ];
 
   return (
@@ -112,11 +115,11 @@ const Blog = () => {
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-            Teknoloji Blog
+            Microsoft Teknolojileri ve Yapay Zeka Blog - Bizden Haberler
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Teknoloji dünyasındaki en güncel gelişmeler, uzman görüşleri ve pratik ipuçları. 
-            Dijital dönüşüm yolculuğunuzda size rehberlik edecek içerikler.
+            Microsoft Azure, Copilot, Power Platform, yapay zeka ve dijital dönüşüm konularında uzman görüşleri. 
+            Başarı hikayeleri, sertifikalarımız ve yetkinliklerimizle desteklenen teknik rehberler ve E-Book içerikleri.
           </p>
         </div>
 

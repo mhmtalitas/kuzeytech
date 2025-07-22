@@ -105,13 +105,15 @@ const Contact = () => {
   ];
 
   const services = [
-    "Yapay Zeka Çözümleri",
-    "Power Platform & Otomasyon",
-    "Bulut Çözümleri",
-    "Web Geliştirme",
-    "Mobil Uygulama Geliştirme",
-    "Veri Analizi ve Raporlama",
-    "Siber Güvenlik",
+    "Microsoft Copilot ve Yapay Zeka Danışmanlığı",
+    "Power Platform Geliştirme (PowerApps, Power Automate, Power BI)",
+    "Microsoft Azure ve Bulut Bilişim Çözümleri",
+    "Web Yazılım Geliştirme ve Kurumsal SEO",
+    "Mobil Uygulama Geliştirme (React Native, Flutter)",
+    "Veri Yönetimi ve Raporlama Sistemleri",
+    "Microsoft 365 ve Teams Entegrasyonu",
+    "Kurumsal Lisans Yönetimi",
+    "Siber Güvenlik Yazılımı",
     "Diğer"
   ];
 
@@ -121,11 +123,12 @@ const Contact = () => {
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-            İletişim
+            Trabzon Microsoft Uzmanlığı ve Dijital Dönüşüm İletişim
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Projeleriniz, sorularınız veya işbirliği önerileriniz için bizimle iletişime geçin. 
-            Uzman ekibimiz size en kısa sürede geri dönüş yapacaktır.
+            Trabzon, Giresun, Rize, Samsun, Ordu'da Microsoft Azure danışmanlığı, yapay zeka çözümleri, 
+            web yazılım geliştirme ve kurumsal teknoloji projeleriniz için bizimle iletişime geçin. 
+            Microsoft sertifikalı uzman ekibimiz Karadeniz bölgesinde size en kısa sürede geri dönüş yapacaktır.
           </p>
         </div>
 

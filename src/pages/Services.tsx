@@ -11,73 +11,73 @@ const Services = () => {
   const services = [
     {
       icon: Key,
-      title: "Lisans ve E-Posta Yönetimi",
-      description: "Microsoft 365 ve yazılım lisanslarınızı optimize edin.",
+      title: "Kurumsal Lisans Yönetimi ve Microsoft 365 Danışmanlığı",
+      description: "Microsoft Office, Azure, Power Platform lisanslarınızı optimize edin. Kurumsal e-posta güvenliği ve Microsoft entegrasyonu.",
       features: [
-        "Microsoft 365 yönetimi",
-        "Exchange Server çözümleri",
-        "Lisans optimizasyonu",
-        "E-posta güvenliği",
-        "Compliance ve arşivleme",
-        "Hybrid exchange yapılandırması"
+        "Microsoft 365 kurulum ve yönetimi",
+        "Exchange Server ve Exchange Online çözümleri",
+        "Lisans optimizasyonu ve maliyet danışmanlığı",
+        "E-posta güvenliği ve Defender implementasyonu",
+        "Compliance, arşivleme ve veri yönetimi",
+        "Hybrid exchange yapılandırması ve migrasyonu"
       ]
     },
     {
       icon: Users,
-      title: "Microsoft Modern Work",
-      description: "Ekiplerinizin verimli ve güvenli çalışmasını sağlayan modern workplace çözümleri.",
+      title: "Microsoft Teams ve Modern Workplace Çözümleri",
+      description: "Microsoft Teams, SharePoint entegrasyonu ve hibrit çalışma modelleri. Modern workplace dönüşümünde uzman danışmanlık.",
       features: [
-        "Microsoft 365 kurulumu ve yönetimi",
-        "Microsoft Teams entegrasyonu ve özelleştirme",
-        "Exchange Online e-posta çözümleri",
-        "SharePoint ve OneDrive yönetimi",
-        "Cihaz yönetimi (Microsoft Intune)",
-        "Kullanıcı eğitimi ve değişim yönetimi"
+        "Microsoft 365 ve Teams kurulumu ve özelleştirme",
+        "Teams entegrasyonu, bot geliştirme ve özelleştirme",
+        "Exchange Online ve Outlook entegrasyonu",
+        "SharePoint, OneDrive ve Power Platform entegrasyonu",
+        "Microsoft Intune cihaz yönetimi",
+        "Değişim yönetimi ve kullanıcı eğitimi programları"
       ]
     },
     {
       icon: Wrench,
-      title: "Teknik Destek ve Bakım",
-      description: "7/24 teknik destek ve sistem bakım hizmetleri.",
+      title: "Microsoft Azure Danışmanlığı ve Teknik Destek",
+      description: "7/24 Microsoft Azure teknik destek, bulut bilişim çözümleri ve hibrit altyapı yönetimi hizmetleri.",
       features: [
-        "Sistem izleme ve bakım",
-        "Güvenlik güncellemeleri",
-        "Performans optimizasyonu",
-        "Hata giderme",
-        "Kullanıcı eğitimleri",
-        "Proaktif sistem yönetimi"
+        "Azure sistem izleme, bakım ve optimizasyon",
+        "Azure Security Center ve güvenlik güncellemeleri",
+        "Bulut performans optimizasyonu",
+        "Azure DevOps ve CI/CD pipeline kurulumu",
+        "Microsoft sertifikalı uzmanlardan kullanıcı eğitimleri",
+        "Proaktif Azure sistem yönetimi ve izleme"
       ]
     },
     {
       icon: Key,
-      title: "Yedekleme ve Felaket Kurtarma",
-      description: "İş sürekliliğinizi sağlayan güvenilir yedekleme ve kurtarma çözümleri.",
+      title: "Veri Yönetimi ve Yedekleme Çözümleri",
+      description: "Veeam, Acronis entegrasyonu ile Azure Backup, veri analizi yazılımı ve raporlama sistemleri. İş sürekliliği planlaması.",
       features: [
-        "Azure Backup çözümleri",
-        "Site Recovery planlaması",
-        "Disaster recovery stratejileri",
-        "Veri replikasyonu",
-        "İş sürekliliği planlaması",
-        "Recovery time optimization"
+        "Azure Backup ve hibrit yedekleme çözümleri",
+        "Veeam Backup & Replication implementasyonu",
+        "Site Recovery ve disaster recovery planlaması",
+        "Veri replikasyonu ve senkronizasyon",
+        "İş sürekliliği ve felaket kurtarma planlaması",
+        "Recovery time optimization ve test senaryoları"
       ]
     },
     {
       icon: Cloud,
-      title: "Bulut ve Hibrit Altyapı",
-      description: "Azure bulut platformu ile altyapınızı modernize edin ve optimize edin.",
+      title: "Microsoft Azure ve Bulut Bilişim Çözümleri",
+      description: "Azure bulut platformu migration, hibrit altyapı kurulumu ve siber güvenlik yazılımı entegrasyonu.",
       features: [
-        "Azure Cloud migration hizmetleri",
-        "Hibrit bulut çözümleri",
-        "Altyapı yönetimi ve optimizasyonu",
-        "Maliyet optimizasyonu",
-        "Performans izleme ve raporlama",
-        "24/7 altyapı destek hizmetleri"
+        "Azure Cloud migration ve modernizasyon hizmetleri",
+        "Hibrit bulut çözümleri ve on-premise entegrasyonu",
+        "Azure altyapı yönetimi ve cost optimization",
+        "Azure Security Center ve siber güvenlik",
+        "Azure Monitor ile performans izleme ve raporlama",
+        "24/7 Azure altyapı destek ve danışmanlık hizmetleri"
       ]
     },
     {
       icon: Brain,
-      title: "Yapay Zeka Çözümleri",
-      description: "İşletmenizin ihtiyaçlarına özel AI destekli çözümler geliştiriyoruz.",
+      title: "Yapay Zeka Danışmanlığı ve Microsoft Copilot",
+      description: "Microsoft Copilot entegrasyonu, AI Agents geliştirme ve yapay zeka danışmanlığı. Özel makine öğrenmesi modelleri.",
       features: [
         "Makine öğrenmesi algoritmaları",
         "Doğal dil işleme",
@@ -89,41 +89,41 @@ const Services = () => {
     },
     {
       icon: Globe,
-      title: "Web Geliştirme",
-      description: "Modern, responsive ve SEO uyumlu web siteleri.",
+      title: "Web Yazılım Geliştirme ve SEO Hizmetleri",
+      description: "Modern, responsive kurumsal web siteleri, e-ticaret yazılımı ve Trabzon SEO hizmetleri. Özel yazılım çözümleri geliştirme.",
       features: [
-        "Kurumsal web siteleri",
-        "React, Vue.js, Angular",
-        "CMS çözümleri",
-        "SEO optimizasyonu",
-        "Web performans analizi",
-        "Progressive Web Apps (PWA)"
+        "Kurumsal web yazılım geliştirme ve CRM yazılımı",
+        "React, Next.js, Angular ile modern web uygulamaları",
+        "WordPress, custom CMS çözümleri",
+        "Kurumsal SEO danışmanlığı ve dijital pazarlama SEO",
+        "Web performans optimizasyonu ve analiz",
+        "Progressive Web Apps (PWA) ve API geliştirme"
       ]
     },
     {
       icon: Smartphone,
       title: "Mobil Uygulama Geliştirme",
-      description: "React Native ve Flutter ile cross-platform mobil uygulamalar.",
+      description: "React Native ve Flutter ile iOS/Android mobil uygulamalar. Cross-platform mobil çözümler ve native uygulama geliştirme.",
       features: [
-        "iOS ve Android uygulamaları",
-        "React Native geliştirme",
-        "Flutter uygulamaları",
-        "Native uygulama geliştirme",
-        "App Store optimizasyonu",
-        "Mobil uygulama bakımı"
+        "iOS ve Android mobil uygulamalar",
+        "React Native cross-platform geliştirme",
+        "Flutter hybrid uygulamaları",
+        "Native Swift ve Kotlin geliştirme",
+        "App Store ve Google Play optimizasyonu",
+        "Mobil uygulama bakım ve güncellemeleri"
       ]
     },
     {
       icon: Settings,
-      title: "Power Platform ve Otomasyon",
-      description: "Microsoft Power Platform ile iş süreçlerinizi otomatikleştirin.",
+      title: "Microsoft Power Platform Geliştirme",
+      description: "Power Apps, Power Automate, Power BI ve PowerApps ile düşük kodlu kurumsal uygulamalar ve otomasyon çözümleri.",
       features: [
-        "Power Apps ile özel uygulamalar",
-        "Power Automate ile iş akışları",
-        "Power BI ile veri görselleştirme",
-        "Power Virtual Agents chatbot",
-        "SharePoint entegrasyonu",
-        "Düşük kodlu uygulama geliştirme"
+        "PowerApps ile özel iş uygulamaları geliştirme",
+        "Power Automate ile iş süreçleri otomasyonu",
+        "Power BI ile veri görselleştirme ve raporlama",
+        "Power Virtual Agents ile AI chatbot geliştirme",
+        "SharePoint ve Microsoft 365 entegrasyonu",
+        "Low-code/no-code uygulama geliştirme danışmanlığı"
       ]
     },
     {
@@ -186,11 +186,12 @@ const Services = () => {
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-            Hizmetlerimiz
+            Microsoft Uzmanlığı ve Kurumsal Teknoloji Hizmetleri
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            İşletmenizin dijital dönüşümünde ihtiyaç duyduğu tüm teknoloji hizmetlerini 
-            tek çatı altında sunuyoruz. Uzman ekibimizle projelerinizi başarıyla hayata geçirin.
+            Trabzon ve Karadeniz bölgesinde Microsoft Azure, Copilot, Power Platform danışmanlığı, 
+            web yazılım geliştirme, yapay zeka danışmanlığı ve kurumsal lisans yönetimi hizmetleri. 
+            Dijital dönüşüm ve değişim yönetimi projelerinizde güvenilir teknoloji ortağınız.
           </p>
         </div>
 

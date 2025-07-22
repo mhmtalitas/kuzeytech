@@ -9,33 +9,33 @@ const Home = () => {
   const services = [
     {
       icon: Key,
-      title: "Lisans ve E-Posta Yönetimi",
-      description: "Microsoft 365 ve yazılım lisanslarınızı optimize edin ve e-posta güvenliğinizi sağlayın.",
+      title: "Kurumsal Lisans ve Microsoft 365 Yönetimi",
+      description: "Microsoft Office, Azure lisanslarınızı optimize edin. Kurumsal e-posta güvenliği ve lisans yönetimi danışmanlığı ile maliyetlerinizi düşürün.",
     },
     {
       icon: Users,
-      title: "Microsoft Modern Work",
-      description: "Microsoft 365, Teams entegrasyonu ve modern workplace çözümleri ile ekiplerinizi güçlendirin.",
+      title: "Microsoft Teams ve Modern Workplace",
+      description: "Microsoft 365, Teams entegrasyonu, SharePoint ve modern workplace çözümleri ile ekiplerinizin verimliliğini artırın. Hibrit çalışma modelleri için optimize edilmiş sistemler.",
     },
     {
       icon: Wrench,
-      title: "Teknik Destek ve Bakım",
-      description: "7/24 teknik destek ve sistem bakım hizmetleri ile kesintisiz operasyonlar sağlayın.",
+      title: "Microsoft Azure Danışmanlığı ve Teknik Destek",
+      description: "7/24 Microsoft Azure teknik destek, bulut bilişim çözümleri ve sistem bakım hizmetleri ile kesintisiz operasyonlar sağlayın. Siber güvenlik yazılımı entegrasyonu.",
     },
     {
       icon: HardDrive,
-      title: "Yedekleme ve Felaket Kurtarma",
-      description: "İş sürekliliğinizi sağlayan güvenilir yedekleme ve kurtarma çözümleri sunarız.",
+      title: "Veri Yönetimi ve Yedekleme Çözümleri",
+      description: "Veeam, Acronis ile güvenilir yedekleme ve felaket kurtarma planları. Veri analizi yazılımı ve raporlama sistemleri ile iş sürekliliğinizi sağlayın.",
     },
     {
       icon: Brain,
-      title: "Yapay Zeka Çözümleri",
-      description: "İşletmenizin ihtiyaçlarına özel AI destekli çözümler ve makine öğrenmesi modelleri geliştiriyoruz.",
+      title: "Yapay Zeka Danışmanlığı ve Microsoft Copilot",
+      description: "Microsoft Copilot entegrasyonu, AI Agents geliştirme ve yapay zeka danışmanlığı hizmetleri. İşletmenize özel makine öğrenmesi modelleri ve otomasyon çözümleri.",
     },
     {
       icon: Smartphone,
-      title: "Mobil & Web Geliştirme",
-      description: "React Native, Flutter ve modern web teknolojileri ile platformlar arası uygulamalar geliştirin.",
+      title: "Web Yazılım ve Mobil Uygulama Geliştirme",
+      description: "Özel yazılım çözümleri, CRM yazılımı, ERP yazılımı ve e-ticaret yazılımı geliştirme. React, Flutter ile modern mobil uygulamalar ve kurumsal web sistemleri.",
     },
   ];
 
@@ -59,12 +59,13 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Geleceği Şekillendiren
-              <span className="block text-blue-200">Teknoloji Çözümleri</span>
+              Microsoft Uzmanlığı ile
+              <span className="block text-blue-200">Dijital Dönüşüm Çözümleri</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90 max-w-3xl mx-auto">
-              Kuzey Tech olarak, yapay zekadan otomasyona, bulut çözümlerinden siber güvenliğe kadar 
-              geniş bir yelpazede yenilikçi teknoloji hizmetleri sunuyoruz.
+              Trabzon, Giresun, Rize, Samsun ve Ordu'da dijital dönüşüm hizmetleri. Microsoft Azure, Copilot, 
+              Power Platform, yapay zeka danışmanlığı ve web yazılım geliştirme ile Karadeniz bölgesinin 
+              teknoloji ihtiyaçlarını karşılıyor, değişim yönetimi ve veri yönetimi çözümleri sunuyoruz.
             </p>
             <div className="space-x-4">
               <Button asChild size="lg" variant="secondary">
@@ -88,10 +89,11 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-              Öne Çıkan Hizmetlerimiz
+              Kurumsal Yazılım Çözümleri ve İş Uygulamaları
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Modern teknolojilerle işletmenizin dijital dönüşümünü başarıyla tamamlayın
+              Microsoft teknolojileri ve Ar-Ge gücümüzle işletmenizin dijital dönüşümünü, 
+              raporlama sistemlerini ve kurumsal lisans yönetiminizi optimize ediyoruz
             </p>
           </div>
 
