@@ -104,7 +104,7 @@ const About = () => {
                 </div>
                 <div className="flex justify-between items-center">
                   <span>Ekip Üyeleri</span>
-                  <span className="font-bold text-2xl"><CounterAnimation targetValue={15} duration={2000} suffix="+" /></span>
+                  <span className="font-bold text-2xl"><CounterAnimation targetValue={5} duration={2000} suffix="+" /></span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span>Müşteri Memnuniyeti</span>
