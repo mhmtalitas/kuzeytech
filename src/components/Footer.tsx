@@ -13,8 +13,9 @@ const Footer = () => {
               <span className="font-bold text-xl">Kuzey Tech</span>
             </div>
             <p className="text-primary-foreground/80">
-              Geleceği şekillendiren teknoloji çözümlerinde uzman ekibimizle
-              işletmenizin dijital dönüşümüne öncülük ediyoruz.
+              Trabzon merkezli Microsoft uzmanlığı ile yapay zeka danışmanlığı, 
+              Azure çözümleri ve dijital dönüşüm hizmetlerinde Karadeniz bölgesinin 
+              güvenilir teknoloji ortağınız.
             </p>
           </div>
 
@@ -67,13 +68,14 @@ const Footer = () => {
 
           {/* Services */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-lg">Hizmetlerimiz</h3>
+            <h3 className="font-semibold text-lg">Microsoft Uzmanlığı Hizmetlerimiz</h3>
             <ul className="space-y-2">
-              <li className="text-primary-foreground/80">Lisans ve E-Posta Yönetimi</li>
-              <li className="text-primary-foreground/80">Microsoft Modern Work</li>
-              <li className="text-primary-foreground/80">Teknik Destek ve Bakım</li>
-              <li className="text-primary-foreground/80">Yedekleme ve Felaket Kurtarma</li>
-              <li className="text-primary-foreground/80">Mobil & Web Geliştirme</li>
+              <li className="text-primary-foreground/80">Microsoft Copilot ve Yapay Zeka</li>
+              <li className="text-primary-foreground/80">Microsoft Azure Danışmanlığı</li>
+              <li className="text-primary-foreground/80">Power Platform Geliştirme</li>
+              <li className="text-primary-foreground/80">Microsoft 365 ve Teams</li>
+              <li className="text-primary-foreground/80">Web Yazılım Geliştirme</li>
+              <li className="text-primary-foreground/80">Kurumsal Lisans Yönetimi</li>
             </ul>
           </div>
 
