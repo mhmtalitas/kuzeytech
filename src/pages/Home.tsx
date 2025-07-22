@@ -59,13 +59,12 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Microsoft Uzmanlığı ile
-              <span className="block text-blue-200">Dijital Dönüşüm Çözümleri</span>
+              Geleceği Şekillendiren
+              <span className="block text-blue-200">Teknoloji Çözümleri</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90 max-w-3xl mx-auto">
-              Trabzon, Giresun, Rize, Samsun ve Ordu'da dijital dönüşüm hizmetleri. Microsoft Azure, Copilot, 
-              Power Platform, yapay zeka danışmanlığı ve web yazılım geliştirme ile Karadeniz bölgesinin 
-              teknoloji ihtiyaçlarını karşılıyor, değişim yönetimi ve veri yönetimi çözümleri sunuyoruz.
+              Microsoft Azure, Copilot, Power Platform, yapay zeka danışmanlığı ve web yazılım geliştirme 
+              hizmetleriyle işletmenizin değişim yönetimi ve veri yönetimi ihtiyaçlarını karşılıyoruz.
             </p>
             <div className="space-x-4">
               <Button asChild size="lg" variant="secondary">
