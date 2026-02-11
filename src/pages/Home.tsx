@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { Brain, Cloud, Shield, BarChart3, Settings, Smartphone, ArrowRight, Users, Key, Wrench, HardDrive } from "lucide-react";
 import CounterAnimation from "@/components/CounterAnimation";
 import useScrollAnimation from "@/hooks/useScrollAnimation";
+import SEO from "@/components/SEO";
+
 
 const Home = () => {
   const services = [
@@ -54,6 +56,12 @@ const Home = () => {
 
   return (
     <div>
+      <SEO
+        title="Uptexx - Microsoft Uzmanlığı, Yapay Zeka ve Dijital Dönüşüm | İstanbul & Tüm Türkiye"
+        description="İstanbul merkezli Uptexx, tüm Türkiye'ye Microsoft Azure, Copilot, Power Platform ve yapay zeka danışmanlığı hizmetleri sunar. Dijital dönüşüm ortağınız."
+        keywords="microsoft uzmanlığı, yapay zeka danışmanlığı, istanbul teknoloji, türkiye yazılım, dijital dönüşüm, azure, copilot, power platform"
+        canonical="/"
+      />
       {/* Hero Section */}
       <section className="bg-gradient-hero text-primary-foreground py-20">
         <div className="container mx-auto px-4">
@@ -63,7 +71,7 @@ const Home = () => {
               <span className="block text-blue-200">Teknoloji Çözümleri</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90 max-w-3xl mx-auto">
-              Microsoft Azure, Copilot, Power Platform, yapay zeka danışmanlığı ve web yazılım geliştirme 
+              Microsoft Azure, Copilot, Power Platform, yapay zeka danışmanlığı ve web yazılım geliştirme
               hizmetleriyle işletmenizin değişim yönetimi ve veri yönetimi ihtiyaçlarını karşılıyoruz.
             </p>
             <div className="space-x-4">
@@ -91,7 +99,7 @@ const Home = () => {
               Kurumsal Yazılım Çözümleri ve İş Uygulamaları
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Microsoft teknolojileri ve Ar-Ge gücümüzle işletmenizin dijital dönüşümünü, 
+              Microsoft teknolojileri ve Ar-Ge gücümüzle işletmenizin dijital dönüşümünü,
               raporlama sistemlerini ve kurumsal lisans yönetiminizi optimize ediyoruz
             </p>
           </div>

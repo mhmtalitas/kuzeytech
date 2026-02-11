@@ -14,7 +14,7 @@ const References = () => {
       company: "TechCorp A.Ş.",
       location: "İstanbul",
       rating: 5,
-      comment: "Kuzey Tech ile çalışmaktan çok memnunuz. Özellikle Power BI raporlama sistemimizi kurarken gösterdikleri profesyonellik ve teknik bilgi birikimi etkileyiciydi. Şirketimizin veri analizi süreçlerini tamamen dönüştürdüler.",
+      comment: "Uptexx ile çalışmaktan çok memnunuz. Özellikle Power BI raporlama sistemimizi kurarken gösterdikleri profesyonellik ve teknik bilgi birikimi etkileyiciydi. Şirketimizin veri analizi süreçlerini tamamen dönüştürdüler.",
       project: "Power BI Dashboard & Raporlama Sistemi",
       duration: "3 ay",
       avatar: "AY"
@@ -25,7 +25,7 @@ const References = () => {
       company: "İnovasyon Ltd.",
       location: "Ankara",
       rating: 5,
-      comment: "Cloud migration projemizde Kuzey Tech'in uzman desteği sayesinde hiçbir veri kaybı yaşamadan Azure'a geçiş yaptık. 7/24 destek hizmetleri de çok değerli. Kesinlikle tavsiye ederim.",
+      comment: "Cloud migration projemizde Uptexx'in uzman desteği sayesinde hiçbir veri kaybı yaşamadan Azure'a geçiş yaptık. 7/24 destek hizmetleri de çok değerli. Kesinlikle tavsiye ederim.",
       project: "Azure Cloud Migration",
       duration: "4 ay",
       avatar: "EK"
@@ -47,7 +47,7 @@ const References = () => {
       company: "GlobalTech",
       location: "Bursa",
       rating: 5,
-      comment: "CV Converter ürünleri sayesinde işe alım sürecimiz çok hızlandı. Binlerce CV'yi otomatik olarak analiz edebiliyoruz. Kuzey Tech'in AI çözümleri gerçekten fark yaratıyor.",
+      comment: "CV Converter ürünleri sayesinde işe alım sürecimiz çok hızlandı. Binlerce CV'yi otomatik olarak analiz edebiliyoruz. Uptexx'in AI çözümleri gerçekten fark yaratıyor.",
       project: "İK Sistemleri & CV Converter",
       duration: "2 ay",
       avatar: "ZD"
@@ -69,7 +69,7 @@ const References = () => {
       company: "Lojistik Plus",
       location: "Trabzon",
       rating: 5,
-      comment: "Event Tracker ile etkinlik yönetimimiz çok profesyonelleşti. Özellikle QR kod sistemi ve real-time raporlar harika. Yerel bir firma olarak Kuzey Tech'i destekliyoruz.",
+      comment: "Event Tracker ile etkinlik yönetimimiz çok profesyonelleşti. Özellikle QR kod sistemi ve real-time raporlar harika. Yerel bir firma olarak Uptexx'i destekliyoruz.",
       project: "Etkinlik Yönetim Sistemi",
       duration: "3 ay",
       avatar: "FY"
@@ -124,7 +124,7 @@ const References = () => {
             Referanslarımız
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Farklı sektörlerden 50+ işletme bize güvendi. Başarılı projelerimiz ve 
+            Farklı sektörlerden 50+ işletme bize güvendi. Başarılı projelerimiz ve
             müşteri deneyimlerimiz ile neden bizi tercih ettiklerini keşfedin.
           </p>
         </div>
@@ -169,38 +169,38 @@ const References = () => {
                 className={`shadow-card p-6 flex flex-col items-center text-center transition-all duration-300 hover:shadow-corporate hover:-translate-y-1`}
               >
                 <Quote className="h-10 w-10 text-primary mb-4" />
-                  <CardHeader>
-                    <div className="flex items-start justify-between mb-4">
-                      <div className="flex items-center space-x-3">
-                        <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center">
-                          <span className="text-primary-foreground font-semibold text-sm">{testimonial.avatar}</span>
-                        </div>
-                        <div>
-                          <h3 className="font-semibold text-primary">{testimonial.name}</h3>
-                          <p className="text-sm text-muted-foreground">{testimonial.position}</p>
-                          <p className="text-sm font-medium">{testimonial.company}</p>
-                        </div>
+                <CardHeader>
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center">
+                        <span className="text-primary-foreground font-semibold text-sm">{testimonial.avatar}</span>
                       </div>
-                      <div className="flex">
-                        {[...Array(testimonial.rating)].map((_, i) => (
-                          <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                        ))}
+                      <div>
+                        <h3 className="font-semibold text-primary">{testimonial.name}</h3>
+                        <p className="text-sm text-muted-foreground">{testimonial.position}</p>
+                        <p className="text-sm font-medium">{testimonial.company}</p>
                       </div>
                     </div>
-                    <div className="flex items-center space-x-2 mb-2">
-                      <Badge variant="secondary">{testimonial.project}</Badge>
-                      <Badge variant="outline">{testimonial.duration}</Badge>
+                    <div className="flex">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                      ))}
                     </div>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="flex items-start space-x-2">
-                      <Quote className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
-                      <p className="text-muted-foreground text-sm italic">
-                        {testimonial.comment}
-                      </p>
-                    </div>
-                  </CardContent>
-                </Card>
+                  </div>
+                  <div className="flex items-center space-x-2 mb-2">
+                    <Badge variant="secondary">{testimonial.project}</Badge>
+                    <Badge variant="outline">{testimonial.duration}</Badge>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex items-start space-x-2">
+                    <Quote className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
+                    <p className="text-muted-foreground text-sm italic">
+                      {testimonial.comment}
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </section>
@@ -222,41 +222,41 @@ const References = () => {
                 key={index}
                 className={`shadow-card transition-all duration-300 hover:shadow-corporate hover:-translate-y-1`}
               >
-                  <CardHeader>
-                    <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-                      <div>
-                        <CardTitle className="text-primary text-xl mb-2">{project.title}</CardTitle>
-                        <CardDescription className="text-base mb-4">
-                          {project.description}
-                        </CardDescription>
-                      </div>
-                      <Badge className="self-start md:self-center">{project.client}</Badge>
+                <CardHeader>
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+                    <div>
+                      <CardTitle className="text-primary text-xl mb-2">{project.title}</CardTitle>
+                      <CardDescription className="text-base mb-4">
+                        {project.description}
+                      </CardDescription>
                     </div>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div>
-                        <h4 className="font-semibold text-primary mb-2">Kullanılan Teknolojiler</h4>
-                        <div className="flex flex-wrap gap-2">
-                          {project.technologies.map((tech, techIndex) => (
-                            <Badge key={techIndex} variant="outline">{tech}</Badge>
-                          ))}
-                        </div>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-primary mb-2">Elde Edilen Sonuçlar</h4>
-                        <ul className="space-y-1">
-                          {project.results.map((result, resultIndex) => (
-                            <li key={resultIndex} className="text-sm text-muted-foreground flex items-center">
-                              <span className="text-green-500 mr-2">✓</span>
-                              {result}
-                            </li>
-                          ))}
-                        </ul>
+                    <Badge className="self-start md:self-center">{project.client}</Badge>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <h4 className="font-semibold text-primary mb-2">Kullanılan Teknolojiler</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {project.technologies.map((tech, techIndex) => (
+                          <Badge key={techIndex} variant="outline">{tech}</Badge>
+                        ))}
                       </div>
                     </div>
-                  </CardContent>
-                </Card>
+                    <div>
+                      <h4 className="font-semibold text-primary mb-2">Elde Edilen Sonuçlar</h4>
+                      <ul className="space-y-1">
+                        {project.results.map((result, resultIndex) => (
+                          <li key={resultIndex} className="text-sm text-muted-foreground flex items-center">
+                            <span className="text-green-500 mr-2">✓</span>
+                            {result}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </section>
@@ -265,10 +265,10 @@ const References = () => {
         <section className="mt-20 bg-secondary rounded-lg p-8 md:p-12">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-primary mb-4">
-              Neden Kuzey Tech?
+              Neden Uptexx?
             </h2>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="text-4xl font-bold text-primary mb-2">2+</div>

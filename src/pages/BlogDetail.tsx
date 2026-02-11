@@ -3,6 +3,7 @@ import { useLocation, Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Calendar, User, Clock, Eye, ArrowLeft } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
+import SEO from "@/components/SEO";
 
 interface BlogPost {
   title: string;
@@ -27,6 +28,13 @@ const BlogDetail: React.FC = () => {
   return (
     <div className="min-h-screen py-20">
       <div className="container mx-auto px-4">
+        <SEO
+          title={`${post.title} - Uptexx Blog`}
+          description={post.excerpt}
+          keywords={`${post.category}, blog, teknoloji, ${post.author}`}
+          canonical={`/blog/${location.pathname.split('/').pop()}`}
+          type="article"
+        />
         <Button asChild variant="outline" className="mb-8">
           <Link to="/blog">
             <ArrowLeft className="mr-2 h-4 w-4" />
@@ -70,7 +78,7 @@ const BlogDetail: React.FC = () => {
             {post.excerpt}
           </p>
           <p className="text-lg leading-relaxed mb-6">
-            Bu kısım blog yazısının tam metnini içerecektir. Şu anda sadece bir yer tutucudur. 
+            Bu kısım blog yazısının tam metnini içerecektir. Şu anda sadece bir yer tutucudur.
             Gerçek blog içerikleri bir veri tabanından veya harici bir dosyadan yüklenebilir.
           </p>
           <p className="text-lg leading-relaxed">

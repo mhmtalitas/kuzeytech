@@ -1,11 +1,12 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { 
-  Brain, Settings, Cloud, Shield, BarChart3, Key, 
-  Users, Smartphone, Globe, ShoppingCart, Monitor, Wrench, ArrowRight 
+import {
+  Brain, Settings, Cloud, Shield, BarChart3, Key,
+  Users, Smartphone, Globe, ShoppingCart, Monitor, Wrench, ArrowRight
 } from "lucide-react";
 // import useScrollAnimation from "@/hooks/useScrollAnimation"; // Kaldırıldı
+import SEO from "@/components/SEO";
 
 const Services = () => {
   const services = [
@@ -183,14 +184,20 @@ const Services = () => {
   return (
     <div className="min-h-screen py-20">
       <div className="container mx-auto px-4">
+        <SEO
+          title="Hizmetlerimiz - Microsoft Azure, Copilot, AI Danışmanlığı | Uptexx"
+          description="Uptexx Hizmetleri: Microsoft Azure, Copilot, Power Platform, Yapay Zeka Danışmanlığı, Web ve Mobil Yazılım, Siber Güvenlik. İstanbul'dan tüm Türkiye'ye kurumsal çözümler."
+          keywords="microsoft azure danışmanlığı, copilot entegrasyonu, power platform geliştirme, yapay zeka danışmanlığı, web yazılım, mobil uygulama, siber güvenlik, kurumsal lisanslama"
+          canonical="/hizmetler"
+        />
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">
             Microsoft Uzmanlığı ve Kurumsal Teknoloji Hizmetleri
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Trabzon ve Karadeniz bölgesinde Microsoft Azure, Copilot, Power Platform danışmanlığı, 
-            web yazılım geliştirme, yapay zeka danışmanlığı ve kurumsal lisans yönetimi hizmetleri. 
+            Trabzon ve Karadeniz bölgesinde Microsoft Azure, Copilot, Power Platform danışmanlığı,
+            web yazılım geliştirme, yapay zeka danışmanlığı ve kurumsal lisans yönetimi hizmetleri.
             Dijital dönüşüm ve değişim yönetimi projelerinizde güvenilir teknoloji ortağınız.
           </p>
         </div>
@@ -282,7 +289,7 @@ const Services = () => {
             Projeniz İçin Ücretsiz Danışmanlık Alın
           </h2>
           <p className="text-xl mb-8 text-primary-foreground/90 max-w-2xl mx-auto">
-            Hangi hizmete ihtiyacınız olduğundan emin değil misiniz? 
+            Hangi hizmete ihtiyacınız olduğundan emin değil misiniz?
             Uzman ekibimizle görüşerek size en uygun çözümü belirleyelim.
           </p>
           <div className="flex justify-center">

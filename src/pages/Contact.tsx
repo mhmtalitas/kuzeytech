@@ -7,6 +7,7 @@ import { Mail, Phone, MapPin, Clock, Send, MessageSquare, Facebook, Twitter, Lin
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import emailjs from '@emailjs/browser';
+import SEO from "@/components/SEO";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -27,7 +28,7 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Form validation
     if (!formData.name || !formData.email || !formData.message) {
       toast({
@@ -46,7 +47,7 @@ const Contact = () => {
         company: formData.company,
         subject: formData.subject,
         message: formData.message,
-        to_email: "info@kuzeytech.net"
+        to_email: "info@uptexx.com"
       };
 
       // EmailJS ayarları - Bu değerleri EmailJS dashboard'dan alın
@@ -85,7 +86,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Adres",
-      details: ["Çeşmeönü Mah. Alpaslan Türkeş Cd.", "No:32/A, 61800 Beşikdüzü/Trabzon"]
+      details: ["Maslak Mah. Büyükdere Cad.", "No:123, 34398 Sarıyer/İstanbul"]
     },
     {
       icon: Phone,
@@ -95,7 +96,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: "E-posta",
-      details: ["info@kuzeytech.net"]
+      details: ["info@uptexx.com"]
     },
     {
       icon: Clock,
@@ -120,15 +121,21 @@ const Contact = () => {
   return (
     <div className="min-h-screen py-20">
       <div className="container mx-auto px-4">
+        <SEO
+          title="İletişim - Uptexx | İstanbul Merkezli, Tüm Türkiye'ye Hizmet"
+          description="Microsoft Azure, Yapay Zeka ve Kurumsal Yazılım projeleriniz için Uptexx ile iletişime geçin. İstanbul Maslak ofisimizden tüm Türkiye'ye hizmet veriyoruz."
+          keywords="uptexx iletişim, microsoft danışmanlık iletişim, istanbul yazılım firması iletişim, kurumsal teknoloji destek, türkiye geneli hizmet"
+          canonical="/iletisim"
+        />
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-            Trabzon Microsoft Uzmanlığı ve Dijital Dönüşüm İletişim
+            İstanbul Microsoft Uzmanlığı ve Dijital Dönüşüm İletişim
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Trabzon, Giresun, Rize, Samsun, Ordu'da Microsoft Azure danışmanlığı, yapay zeka çözümleri, 
-            web yazılım geliştirme ve kurumsal teknoloji projeleriniz için bizimle iletişime geçin. 
-            Microsoft sertifikalı uzman ekibimiz Karadeniz bölgesinde size en kısa sürede geri dönüş yapacaktır.
+            İstanbul, Kocaeli, Bursa, Ankara, İzmir'de Microsoft Azure danışmanlığı, yapay zeka çözümleri,
+            web yazılım geliştirme ve kurumsal teknoloji projeleriniz için bizimle iletişime geçin.
+            Microsoft sertifikalı uzman ekibimiz Marmara bölgesinde size en kısa sürede geri dönüş yapacaktır.
           </p>
         </div>
 
@@ -190,7 +197,7 @@ const Contact = () => {
                         id="subject"
                         name="subject"
                         value={formData.subject}
-                        onChange={(e) => setFormData({...formData, subject: e.target.value})}
+                        onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                         className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                       >
                         <option value="">Konu seçin</option>
@@ -258,19 +265,19 @@ const Contact = () => {
               </CardDescription>
             </CardHeader>
             <CardContent>
-                              {/* Google Maps Embed */}
-                <div className="relative w-full h-96 rounded-lg overflow-hidden">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3018.4892474892474!2d39.2176199!3d41.0591552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4064757fb0f6cba1%3A0x95acc75ed2fd9f14!2sKuzey%20Tech%20Bilgi%20Teknolojileri%20Tic.%20Ltd.%20%C5%9Eti!5e0!3m2!1str!2str!4v1635959999999!5m2!1str!2str"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen={true}
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="Kuzey Tech Ofis Konumu"
-                  ></iframe>
-                </div>
+              {/* Google Maps Embed */}
+              <div className="relative w-full h-96 rounded-lg overflow-hidden">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.9205562017346!2d29.0152!3d41.1114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab5c7d0a6c6d9%3A0x7c7c7c7c7c7c7c7c!2sMaslak%2C%20Sar%C4%B1yer%2F%C4%B0stanbul!5e0!3m2!1str!2str!4v1635959999999!5m2!1str!2str"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen={true}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Uptexx Ofis Konumu"
+                ></iframe>
+              </div>
             </CardContent>
           </Card>
         </section>
@@ -295,7 +302,7 @@ const Contact = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Proje süresi, projenin kapsamına ve karmaşıklığına bağlı olarak 2 hafta ile 6 ay arasında değişebilir. 
+                  Proje süresi, projenin kapsamına ve karmaşıklığına bağlı olarak 2 hafta ile 6 ay arasında değişebilir.
                   Detaylı analiz sonrası kesin süre belirlenir.
                 </p>
               </CardContent>
@@ -309,7 +316,7 @@ const Contact = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Kredi kartı ve banka havalesi ile ödeme kabul edilir. 
+                  Kredi kartı ve banka havalesi ile ödeme kabul edilir.
                   Fatura ve gerekli belgeler proje başlangıcında düzenlenir.
                 </p>
               </CardContent>
@@ -323,7 +330,7 @@ const Contact = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Evet, tüm projelerimizde 1 ay ücretsiz destek hizmeti veriyoruz. 
+                  Evet, tüm projelerimizde 1 ay ücretsiz destek hizmeti veriyoruz.
                   Sonrasında aylık veya yıllık destek paketlerimiz mevcuttur.
                 </p>
               </CardContent>
@@ -337,7 +344,7 @@ const Contact = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Evet, Türkiye'nin her yerinden uzaktan projeler gerçekleştiriyoruz. 
+                  Evet, Türkiye'nin her yerinden uzaktan projeler gerçekleştiriyoruz.
                   Online toplantılar ve iş takip sistemleri ile sorunsuz çalışıyoruz.
                 </p>
               </CardContent>
@@ -361,7 +368,7 @@ const Contact = () => {
               </a>
             </Button>
             <Button asChild size="lg" variant="outline" className="border-primary-foreground text-gray-900 hover:text-white">
-              <a href="mailto:info@kuzeytech.net">
+              <a href="mailto:info@uptexx.com">
                 <Mail className="mr-2 h-4 w-4" />
                 E-posta Gönderin
               </a>

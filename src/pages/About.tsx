@@ -2,6 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Users, Target, Award, Heart } from "lucide-react";
 import CounterAnimation from "@/components/CounterAnimation"; // Import CounterAnimation
 // import useScrollAnimation from "@/hooks/useScrollAnimation"; // Kaldırıldı
+import SEO from "@/components/SEO";
 
 const About = () => {
   const values = [
@@ -12,7 +13,7 @@ const About = () => {
     },
     {
       icon: Award,
-      title: "Vizyonumuz", 
+      title: "Vizyonumuz",
       description: "Teknoloji alanında öncü bir şirket olarak, Türkiye'nin dijital geleceğine öncülük etmek."
     },
     {
@@ -57,14 +58,20 @@ const About = () => {
   return (
     <div className="min-h-screen py-20">
       <div className="container mx-auto px-4">
+        <SEO
+          title="Hakkımızda - Uptexx Teknoloji | İstanbul & Türkiye"
+          description="2025 yılında İstanbul'da kurulan Uptexx, tüm Türkiye'ye Microsoft ve yapay zeka çözümleri sunmaktadır. Vizyonumuz, değerlerimiz ve uzman ekibimizle tanışın."
+          keywords="uptexx hakkında, istanbul teknoloji şirketi, microsoft partner türkiye, yapay zeka şirketi, kurumsal teknoloji, dijital dönüşüm uzmanları"
+          canonical="/hakkimizda"
+        />
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-            Kuzey Tech Hakkında
+            Uptexx Hakkında
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            2025 yılında Trabzon'da kurulan Kuzey Tech, teknoloji alanında yenilikçi çözümler üreten 
-            dinamik bir şirkettir. Müşterilerimizin dijital dönüşüm yolculuğunda güvenilir ortağı olmanın 
+            2025 yılında İstanbul'da kurulan Uptexx, teknoloji alanında yenilikçi çözümler üreten
+            dinamik bir şirkettir. Müşterilerimizin dijital dönüşüm yolculuğunda güvenilir ortağı olmanın
             gururunu yaşıyoruz.
           </p>
         </div>
@@ -76,17 +83,17 @@ const About = () => {
               <h2 className="text-3xl font-bold text-primary mb-6">Hikayemiz</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  Kuzey Tech, teknolojinin hızla geliştiği bir dönemde, işletmelerin bu değişime 
-                  ayak uydurmasına yardımcı olmak amacıyla kuruldu. Karadeniz'in güçlü teknoloji 
+                  Uptexx, teknolojinin hızla geliştiği bir dönemde, işletmelerin bu değişime
+                  ayak uydurmasına yardımcı olmak amacıyla kuruldu. Marmara'nın güçlü teknoloji
                   ekosisteminden yola çıkarak, önce yerel sonra ulusal ölçekte hizmet vermeye başladık.
                 </p>
                 <p>
-                  Bugün, yapay zekadan bulut çözümlerine, web geliştirmeden mobil uygulamalara 
-                  kadar geniş bir yelpazede hizmet sunuyoruz. Her projede müşteri memnuniyetini 
+                  Bugün, yapay zekadan bulut çözümlerine, web geliştirmeden mobil uygulamalara
+                  kadar geniş bir yelpazede hizmet sunuyoruz. Her projede müşteri memnuniyetini
                   ön planda tutarak, uzun vadeli iş ortaklıkları kurmayı hedefliyoruz.
                 </p>
                 <p>
-                  Sürekli öğrenme ve gelişim kültürümüzle, sektördeki en güncel teknolojileri 
+                  Sürekli öğrenme ve gelişim kültürümüzle, sektördeki en güncel teknolojileri
                   takip ediyor ve müşterilerimize en iyi çözümleri sunuyoruz.
                 </p>
               </div>
@@ -185,10 +192,10 @@ const About = () => {
         <section className="mt-20 bg-secondary rounded-lg p-8 md:p-12">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-primary mb-4">
-              Neden Kuzey Tech?
+              Neden Uptexx?
             </h2>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="text-4xl font-bold text-primary mb-2">2+</div>

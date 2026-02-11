@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { Calendar, User, ArrowRight, Eye, Clock } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const Blog = () => {
   // Helper function to create a slug from a title
@@ -112,13 +113,19 @@ const Blog = () => {
   return (
     <div className="min-h-screen py-20">
       <div className="container mx-auto px-4">
+        <SEO
+          title="Teknoloji Blogu - Uptexx | Microsoft ve AI Makaleleri"
+          description="Microsoft teknolojileri, yapay zeka, dijital dönüşüm ve yazılım dünyasındaki en son gelişmeler, rehberler ve başarı hikayeleri Uptexx Blog'da."
+          keywords="teknoloji blogu, microsoft makaleleri, yapay zeka haberleri, yazılım rehberleri, dijital dönüşüm blog, uptexx blog"
+          canonical="/blog"
+        />
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">
             Microsoft Teknolojileri ve Yapay Zeka Blog - Bizden Haberler
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Microsoft Azure, Copilot, Power Platform, yapay zeka ve dijital dönüşüm konularında uzman görüşleri. 
+            Microsoft Azure, Copilot, Power Platform, yapay zeka ve dijital dönüşüm konularında uzman görüşleri.
             Başarı hikayeleri, sertifikalarımız ve yetkinliklerimizle desteklenen teknik rehberler ve E-Book içerikleri.
           </p>
         </div>
@@ -245,8 +252,8 @@ const Blog = () => {
                 <div className="space-y-2">
                   {categories.map((category, index) => (
                     <div key={index} className="flex items-center justify-between py-2 border-b border-border last:border-0">
-                      <Link 
-                        to="#" 
+                      <Link
+                        to="#"
                         className="text-muted-foreground hover:text-primary transition-colors"
                       >
                         {category.name}
@@ -321,8 +328,8 @@ const Blog = () => {
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
-                  <input 
-                    type="email" 
+                  <input
+                    type="email"
                     placeholder="E-posta adresiniz"
                     className="w-full p-3 rounded-lg bg-primary-foreground text-primary placeholder:text-primary/60"
                   />
@@ -341,7 +348,7 @@ const Blog = () => {
             Teknoloji Danışmanlığı İhtiyacınız Var mı?
           </h2>
           <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Blog yazılarımızdan ilham aldınız ve bu teknolojileri işletmenizde uygulamak istiyorsunuz? 
+            Blog yazılarımızdan ilham aldınız ve bu teknolojileri işletmenizde uygulamak istiyorsunuz?
             Uzman ekibimizle ücretsiz danışmanlık alın.
           </p>
           <div className="space-x-4">

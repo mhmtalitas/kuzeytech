@@ -9,12 +9,12 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <img src="/kuzeytechlogo.png" alt="Kuzey Tech Logo" className="h-16 w-auto" />
-              <span className="font-bold text-xl">Kuzey Tech</span>
+              <img src="/uptexxlogo.png" alt="Uptexx Logo" className="h-16 w-auto" />
+              <span className="font-bold text-xl">Uptexx</span>
             </div>
             <p className="text-primary-foreground/80">
-              Trabzon merkezli Microsoft uzmanlığı ile yapay zeka danışmanlığı, 
-              Azure çözümleri ve dijital dönüşüm hizmetlerinde Karadeniz bölgesinin 
+              İstanbul merkezli Microsoft uzmanlığı ile yapay zeka danışmanlığı,
+              Azure çözümleri ve dijital dönüşüm hizmetlerinde tüm Türkiye'nin
               güvenilir teknoloji ortağınız.
             </p>
           </div>
@@ -86,13 +86,13 @@ const Footer = () => {
               <div className="flex items-start space-x-2">
                 <MapPin className="h-4 w-4 mt-1 flex-shrink-0" />
                 <div className="text-primary-foreground/80">
-                  <div>Çeşmeönü Mah. Alpaslan Türkeş Cd.</div>
-                  <div>No:32/A, 61800 Beşikdüzü/Trabzon</div>
+                  <div>Maslak Mah. Büyükdere Cad.</div>
+                  <div>No:123, 34398 Sarıyer/İstanbul</div>
                 </div>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4" />
-                <span className="text-primary-foreground/80">info@kuzeytech.net</span>
+                <span className="text-primary-foreground/80">info@uptexx.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />
@@ -126,7 +126,7 @@ const Footer = () => {
 
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center">
           <p className="text-primary-foreground/60">
-            © 2025 Kuzey Tech. Tüm hakları saklıdır.
+            © 2025 Uptexx. Tüm hakları saklıdır.
           </p>
         </div>
       </div>

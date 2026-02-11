@@ -2,6 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { HelmetProvider } from "react-helmet-async";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
@@ -35,32 +36,34 @@ const ScrollToTop = () => {
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <div className="flex flex-col min-h-screen">
-          <ScrollToTop />
-          <Navigation />
-          <main className="pt-16 flex-grow">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/hakkimizda" element={<About />} />
-              <Route path="/hizmetler" element={<Services />} />
-              {/* <Route path="/urunler" element={<Products />} /> */}
-              {/* <Route path="/urun-detay/:slug" element={<ProductDetail />} /> */}
-              {/* <Route path="/referanslar" element={<References />} /> */}
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/blog/:slug" element={<BlogDetail />} />
-              <Route path="/iletisim" element={<Contact />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </main>
-          <Footer />
-          <WhatsAppButton />
-        </div>
-      </BrowserRouter>
-    </TooltipProvider>
+    <HelmetProvider>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <div className="flex flex-col min-h-screen">
+            <ScrollToTop />
+            <Navigation />
+            <main className="pt-16 flex-grow">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/hakkimizda" element={<About />} />
+                <Route path="/hizmetler" element={<Services />} />
+                {/* <Route path="/urunler" element={<Products />} /> */}
+                {/* <Route path="/urun-detay/:slug" element={<ProductDetail />} /> */}
+                {/* <Route path="/referanslar" element={<References />} /> */}
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/blog/:slug" element={<BlogDetail />} />
+                <Route path="/iletisim" element={<Contact />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </main>
+            <Footer />
+            <WhatsAppButton />
+          </div>
+        </BrowserRouter>
+      </TooltipProvider>
+    </HelmetProvider>
   </QueryClientProvider>
 );
 

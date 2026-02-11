@@ -23,7 +23,7 @@ const WhatsAppIcon = () => (
 
 const WhatsAppButton = ({
   phoneNumber = "+905340520000",
-  message = "Merhaba! KuzeyTech hakkında bilgi almak istiyorum.",
+  message = "Merhaba, Uptexx hizmetleri hakkında bilgi almak istiyorum.",
   className = ""
 }: WhatsAppButtonProps) => {
   const handleClick = () => {

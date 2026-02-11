@@ -24,8 +24,8 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <img src="/kuzeytechlogo.png" alt="Kuzey Tech Logo" className="h-16 w-auto" />
-            <span className="font-bold text-xl text-primary">Kuzey Tech</span>
+            <img src="/uptexxlogo.png" alt="Uptexx Logo" className="h-16 w-auto" />
+            <span className="font-bold text-xl text-primary">Uptexx</span>
           </Link>
 
           {/* Desktop Menu */}
@@ -35,11 +35,10 @@ const Navigation = () => {
                 <Link
                   key={item.name}
                   to={item.path}
-                  className={`font-medium transition-colors hover:text-primary ${
-                    isActive(item.path)
-                      ? "text-primary border-b-2 border-primary"
-                      : "text-muted-foreground"
-                  }`}
+                  className={`font-medium transition-colors hover:text-primary ${isActive(item.path)
+                    ? "text-primary border-b-2 border-primary"
+                    : "text-muted-foreground"
+                    }`}
                 >
                   {item.name}
                 </Link>
@@ -66,11 +65,10 @@ const Navigation = () => {
                 <Link
                   key={item.name}
                   to={item.path}
-                  className={`block px-3 py-2 rounded-md font-medium transition-colors ${
-                    isActive(item.path)
-                      ? "bg-primary text-primary-foreground"
-                      : "text-muted-foreground hover:bg-secondary hover:text-primary"
-                  }`}
+                  className={`block px-3 py-2 rounded-md font-medium transition-colors ${isActive(item.path)
+                    ? "bg-primary text-primary-foreground"
+                    : "text-muted-foreground hover:bg-secondary hover:text-primary"
+                    }`}
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
