@@ -91,7 +91,7 @@ const Services = () => {
     {
       icon: Globe,
       title: "Web Yazılım Geliştirme ve SEO Hizmetleri",
-      description: "Modern, responsive kurumsal web siteleri, e-ticaret yazılımı ve Trabzon SEO hizmetleri. Özel yazılım çözümleri geliştirme.",
+      description: "Modern, responsive kurumsal web siteleri, e-ticaret yazılımı ve Kurumsal SEO hizmetleri. Özel yazılım çözümleri geliştirme.",
       features: [
         "Kurumsal web yazılım geliştirme ve CRM yazılımı",
         "React, Next.js, Angular ile modern web uygulamaları",
@@ -196,7 +196,7 @@ const Services = () => {
             Microsoft Uzmanlığı ve Kurumsal Teknoloji Hizmetleri
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Trabzon ve Karadeniz bölgesinde Microsoft Azure, Copilot, Power Platform danışmanlığı,
+            İstanbul merkezli ve tüm Türkiye'de Microsoft Azure, Copilot, Power Platform danışmanlığı,
             web yazılım geliştirme, yapay zeka danışmanlığı ve kurumsal lisans yönetimi hizmetleri.
             Dijital dönüşüm ve değişim yönetimi projelerinizde güvenilir teknoloji ortağınız.
           </p>

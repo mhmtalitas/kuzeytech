@@ -22,7 +22,7 @@ const WhatsAppIcon = () => (
 );
 
 const WhatsAppButton = ({
-  phoneNumber = "+905340520000",
+  phoneNumber = "905438716131",
   message = "Merhaba, Uptexx hizmetleri hakkında bilgi almak istiyorum.",
   className = ""
 }: WhatsAppButtonProps) => {

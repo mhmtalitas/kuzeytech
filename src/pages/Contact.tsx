@@ -91,7 +91,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Telefon",
-      details: ["+90 534 052 00 00"]
+      details: ["0543 871 61 31"]
     },
     {
       icon: Mail,
@@ -362,7 +362,7 @@ const Contact = () => {
           </p>
           <div className="space-x-4">
             <Button asChild size="lg" variant="secondary">
-              <a href="tel:+90462XXXXXXX">
+              <a href="tel:+905438716131">
                 <Phone className="mr-2 h-4 w-4" />
                 Hemen Arayın
               </a>
