@@ -86,7 +86,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Adres",
-      details: ["Maslak Mah. Büyükdere Cad.", "No:123, 34398 Sarıyer/İstanbul"]
+      details: ["Fatih Sultan Mehmet Mah. Depoyolu Sk.", "No:16 İç Kapı no:58, One Block Plaza", "34774 Ümraniye/İstanbul"]
     },
     {
       icon: Phone,
@@ -123,7 +123,7 @@ const Contact = () => {
       <div className="container mx-auto px-4">
         <SEO
           title="İletişim - Uptexx | İstanbul Merkezli, Tüm Türkiye'ye Hizmet"
-          description="Microsoft Azure, Yapay Zeka ve Kurumsal Yazılım projeleriniz için Uptexx ile iletişime geçin. İstanbul Maslak ofisimizden tüm Türkiye'ye hizmet veriyoruz."
+          description="Microsoft Azure, Yapay Zeka ve Kurumsal Yazılım projeleriniz için Uptexx ile iletişime geçin. İstanbul Ümraniye ofisimizden tüm Türkiye'ye hizmet veriyoruz."
           keywords="uptexx iletişim, microsoft danışmanlık iletişim, istanbul yazılım firması iletişim, kurumsal teknoloji destek, türkiye geneli hizmet"
           canonical="/iletisim"
         />
@@ -268,7 +268,7 @@ const Contact = () => {
               {/* Google Maps Embed */}
               <div className="relative w-full h-96 rounded-lg overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.9205562017346!2d29.0152!3d41.1114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab5c7d0a6c6d9%3A0x7c7c7c7c7c7c7c7c!2sMaslak%2C%20Sar%C4%B1yer%2F%C4%B0stanbul!5e0!3m2!1str!2str!4v1635959999999!5m2!1str!2str"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3010.5113!2d29.1280!3d41.0261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac9263432021f%3A0x6b45a0b674828f4c!2sOne%20Block%20Plaza!5e0!3m2!1str!2str!4v1708600000000!5m2!1str!2str"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

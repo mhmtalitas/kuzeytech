@@ -86,8 +86,9 @@ const Footer = () => {
               <div className="flex items-start space-x-2">
                 <MapPin className="h-4 w-4 mt-1 flex-shrink-0" />
                 <div className="text-primary-foreground/80">
-                  <div>Maslak Mah. Büyükdere Cad.</div>
-                  <div>No:123, 34398 Sarıyer/İstanbul</div>
+                  <div>Fatih Sultan Mehmet Mah. Depoyolu Sk.</div>
+                  <div>No:16 İç Kapı no:58, One Block Plaza</div>
+                  <div>34774 Ümraniye/İstanbul</div>
                 </div>
               </div>
               <div className="flex items-center space-x-2">
