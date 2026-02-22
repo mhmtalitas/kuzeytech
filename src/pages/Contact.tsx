@@ -268,7 +268,7 @@ const Contact = () => {
               {/* Google Maps Embed */}
               <div className="relative w-full h-96 rounded-lg overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3010.5113!2d29.1280!3d41.0261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac9263432021f%3A0x6b45a0b674828f4c!2sOne%20Block%20Plaza!5e0!3m2!1str!2str!4v1708600000000!5m2!1str!2str"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3010.027!2d29.1237914!3d41.0211197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac8db0775003f%3A0x81ddc9aafbc2dfd6!2sOneBlock!5e0!3m2!1str!2str!4v1740210000000!5m2!1str!2str"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
