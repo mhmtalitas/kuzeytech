@@ -86,7 +86,10 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Adres",
-      details: ["Fatih Sultan Mehmet Mah. Depoyolu Sk.", "No:16 İç Kapı no:58, One Block Plaza", "34774 Ümraniye/İstanbul"]
+      details: [
+        "Merkez Ofis: Cumhuriyet Mah. Kazım Karabekir Cad. No:2/28 61800 Beşikdüzü/Trabzon",
+        "İstanbul Şube: Fatih Sultan Mehmet Mah. Depoyolu Sk. No:16 İç Kapı no:58, One Block Plaza 34774 Ümraniye/İstanbul"
+      ]
     },
     {
       icon: Phone,

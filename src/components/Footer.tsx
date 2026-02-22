@@ -85,10 +85,15 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-start space-x-2">
                 <MapPin className="h-4 w-4 mt-1 flex-shrink-0" />
-                <div className="text-primary-foreground/80">
-                  <div>Fatih Sultan Mehmet Mah. Depoyolu Sk.</div>
-                  <div>No:16 İç Kapı no:58, One Block Plaza</div>
-                  <div>34774 Ümraniye/İstanbul</div>
+                <div className="text-primary-foreground/80 space-y-2">
+                  <div>
+                    <span className="font-semibold block">Merkez Ofis:</span>
+                    Cumhuriyet Mah. Kazım Karabekir Cad. No:2/28 61800 Beşikdüzü/Trabzon
+                  </div>
+                  <div>
+                    <span className="font-semibold block">İstanbul Şube:</span>
+                    Fatih Sultan Mehmet Mah. Depoyolu Sk. No:16 İç Kapı no:58, One Block Plaza 34774 Ümraniye/İstanbul
+                  </div>
                 </div>
               </div>
               <div className="flex items-center space-x-2">
