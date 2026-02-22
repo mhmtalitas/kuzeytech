@@ -243,7 +243,7 @@ const Contact = () => {
                     {info.title}
                   </CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="space-y-4">
                   {info.details.map((detail, detailIndex) => (
                     <p key={detailIndex} className="text-muted-foreground">
                       {detail}
