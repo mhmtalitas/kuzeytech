@@ -1,11 +1,9 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import {
   Brain, Settings, Cloud, Shield, BarChart3, Key,
-  Users, Smartphone, Globe, ShoppingCart, Monitor, Wrench, ArrowRight
+  Users, Smartphone, Globe, ShoppingCart, Monitor, Wrench, ArrowRight, Check
 } from "lucide-react";
-// import useScrollAnimation from "@/hooks/useScrollAnimation"; // Kaldırıldı
 import SEO from "@/components/SEO";
 
 const Services = () => {
@@ -20,8 +18,8 @@ const Services = () => {
         "Lisans optimizasyonu ve maliyet danışmanlığı",
         "E-posta güvenliği ve Defender implementasyonu",
         "Compliance, arşivleme ve veri yönetimi",
-        "Hybrid exchange yapılandırması ve migrasyonu"
-      ]
+        "Hybrid exchange yapılandırması ve migrasyonu",
+      ],
     },
     {
       icon: Users,
@@ -33,8 +31,8 @@ const Services = () => {
         "Exchange Online ve Outlook entegrasyonu",
         "SharePoint, OneDrive ve Power Platform entegrasyonu",
         "Microsoft Intune cihaz yönetimi",
-        "Değişim yönetimi ve kullanıcı eğitimi programları"
-      ]
+        "Değişim yönetimi ve kullanıcı eğitimi programları",
+      ],
     },
     {
       icon: Wrench,
@@ -46,8 +44,8 @@ const Services = () => {
         "Bulut performans optimizasyonu",
         "Azure DevOps ve CI/CD pipeline kurulumu",
         "Microsoft sertifikalı uzmanlardan kullanıcı eğitimleri",
-        "Proaktif Azure sistem yönetimi ve izleme"
-      ]
+        "Proaktif Azure sistem yönetimi ve izleme",
+      ],
     },
     {
       icon: Key,
@@ -59,8 +57,8 @@ const Services = () => {
         "Site Recovery ve disaster recovery planlaması",
         "Veri replikasyonu ve senkronizasyon",
         "İş sürekliliği ve felaket kurtarma planlaması",
-        "Recovery time optimization ve test senaryoları"
-      ]
+        "Recovery time optimization ve test senaryoları",
+      ],
     },
     {
       icon: Cloud,
@@ -72,8 +70,8 @@ const Services = () => {
         "Azure altyapı yönetimi ve cost optimization",
         "Azure Security Center ve siber güvenlik",
         "Azure Monitor ile performans izleme ve raporlama",
-        "24/7 Azure altyapı destek ve danışmanlık hizmetleri"
-      ]
+        "24/7 Azure altyapı destek ve danışmanlık hizmetleri",
+      ],
     },
     {
       icon: Brain,
@@ -85,8 +83,8 @@ const Services = () => {
         "Görüntü tanıma ve analiz",
         "Tahmine dayalı analitik",
         "Chatbot ve sanal asistanlar",
-        "Özel AI modelleri geliştirme"
-      ]
+        "Özel AI modelleri geliştirme",
+      ],
     },
     {
       icon: Globe,
@@ -98,8 +96,8 @@ const Services = () => {
         "WordPress, custom CMS çözümleri",
         "Kurumsal SEO danışmanlığı ve dijital pazarlama SEO",
         "Web performans optimizasyonu ve analiz",
-        "Progressive Web Apps (PWA) ve API geliştirme"
-      ]
+        "Progressive Web Apps (PWA) ve API geliştirme",
+      ],
     },
     {
       icon: Smartphone,
@@ -111,8 +109,8 @@ const Services = () => {
         "Flutter hybrid uygulamaları",
         "Native Swift ve Kotlin geliştirme",
         "App Store ve Google Play optimizasyonu",
-        "Mobil uygulama bakım ve güncellemeleri"
-      ]
+        "Mobil uygulama bakım ve güncellemeleri",
+      ],
     },
     {
       icon: Settings,
@@ -124,8 +122,8 @@ const Services = () => {
         "Power BI ile veri görselleştirme ve raporlama",
         "Power Virtual Agents ile AI chatbot geliştirme",
         "SharePoint ve Microsoft 365 entegrasyonu",
-        "Low-code/no-code uygulama geliştirme danışmanlığı"
-      ]
+        "Low-code/no-code uygulama geliştirme danışmanlığı",
+      ],
     },
     {
       icon: Shield,
@@ -137,8 +135,8 @@ const Services = () => {
         "Tehdit koruması ve izleme",
         "Güvenlik operasyonları merkezi (SOC)",
         "E-posta güvenliği çözümleri",
-        "Güvenlik denetimleri ve uyumluluk"
-      ]
+        "Güvenlik denetimleri ve uyumluluk",
+      ],
     },
     {
       icon: BarChart3,
@@ -150,8 +148,8 @@ const Services = () => {
         "Veri ambarı çözümleri",
         "İş zekası (Business Intelligence)",
         "Gerçek zamanlı veri analizi",
-        "Self-service analytics"
-      ]
+        "Self-service analytics",
+      ],
     },
     {
       icon: ShoppingCart,
@@ -163,8 +161,8 @@ const Services = () => {
         "Envanter yönetimi",
         "CRM entegrasyonu",
         "Mobil ticaret çözümleri",
-        "B2B e-ticaret platformları"
-      ]
+        "B2B e-ticaret platformları",
+      ],
     },
     {
       icon: Monitor,
@@ -176,129 +174,198 @@ const Services = () => {
         "İnsan kaynakları sistemleri",
         "Muhasebe yazılımları",
         "Özel ERP çözümleri",
-        "API geliştirme ve entegrasyon"
-      ]
-    }
+        "API geliştirme ve entegrasyon",
+      ],
+    },
+  ];
+
+  const processSteps = [
+    { step: "01", title: "Analiz", desc: "İhtiyaçlarınızı detaylı olarak analiz eder ve en uygun çözümü belirleriz." },
+    { step: "02", title: "Planlama", desc: "Proje planını hazırlar, zaman çizelgesi ve kaynak dağılımını belirleriz." },
+    { step: "03", title: "Geliştirme", desc: "Uzman ekibimizle çözümü geliştirir ve test ederiz." },
+    { step: "04", title: "Teslimat", desc: "Çözümü teslim eder, eğitim verir ve sürekli destek sağlarız." },
   ];
 
   return (
-    <div className="min-h-screen py-20">
-      <div className="container mx-auto px-4">
-        <SEO
-          title="Hizmetlerimiz - Microsoft Azure, Copilot, AI Danışmanlığı | Uptexx"
-          description="Uptexx Hizmetleri: Microsoft Azure, Copilot, Power Platform, Yapay Zeka Danışmanlığı, Web ve Mobil Yazılım, Siber Güvenlik. İstanbul'dan tüm Türkiye'ye kurumsal çözümler."
-          keywords="microsoft azure danışmanlığı, copilot entegrasyonu, power platform geliştirme, yapay zeka danışmanlığı, web yazılım, mobil uygulama, siber güvenlik, kurumsal lisanslama"
-          canonical="/hizmetler"
-        />
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">
+    <div className="min-h-screen bg-[hsl(220,20%,97%)]">
+      <SEO
+        title="Hizmetlerimiz - Microsoft Azure, Copilot, AI Danışmanlığı | Uptexx"
+        description="Uptexx Hizmetleri: Microsoft Azure, Copilot, Power Platform, Yapay Zeka Danışmanlığı, Web ve Mobil Yazılım, Siber Güvenlik. İstanbul'dan tüm Türkiye'ye kurumsal çözümler."
+        keywords="microsoft azure danışmanlığı, copilot entegrasyonu, power platform geliştirme, yapay zeka danışmanlığı, web yazılım, mobil uygulama, siber güvenlik, kurumsal lisanslama"
+        canonical="/hizmetler"
+      />
+
+      {/* ---- Hero ---- */}
+      <section className="hero-bg pt-40 pb-24 relative overflow-hidden" id="services-hero">
+        <div className="hero-glow" aria-hidden="true" />
+        <div className="container mx-auto px-6 relative z-10 text-center">
+          <div className="inline-flex mb-6 animate-fade-in-down">
+            <span className="tech-chip tech-chip-inverted">
+              <span className="w-1.5 h-1.5 rounded-full bg-blue-300 animate-pulse" />
+              Hizmetlerimiz
+            </span>
+          </div>
+          <h1
+            className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 max-w-4xl mx-auto animate-fade-in-up"
+            style={{ fontFamily: "'Syne', sans-serif" }}
+          >
             Microsoft Uzmanlığı ve Kurumsal Teknoloji Hizmetleri
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-blue-100/75 max-w-3xl mx-auto leading-relaxed animate-fade-in-up delay-100">
             İstanbul merkezli ve tüm Türkiye'de Microsoft Azure, Copilot, Power Platform danışmanlığı,
             web yazılım geliştirme, yapay zeka danışmanlığı ve kurumsal lisans yönetimi hizmetleri.
             Dijital dönüşüm ve değişim yönetimi projelerinizde güvenilir teknoloji ortağınız.
           </p>
         </div>
+        {/* Bottom wave */}
+        <div className="absolute bottom-0 left-0 right-0 pointer-events-none" aria-hidden="true" style={{ zIndex: 5 }}>
+          <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className="w-full" style={{ display: "block", height: 80 }}>
+            <defs>
+              <linearGradient id="waveGradServices" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor="hsl(220, 20%, 97%)" stopOpacity="0" />
+                <stop offset="100%" stopColor="hsl(220, 20%, 97%)" stopOpacity="1" />
+              </linearGradient>
+            </defs>
+            <path d="M0,40 C240,80 480,0 720,40 C960,80 1200,20 1440,50 L1440,80 L0,80 Z" fill="url(#waveGradServices)" />
+            <path d="M0,55 C360,20 720,80 1080,40 C1260,20 1380,65 1440,60 L1440,80 L0,80 Z" fill="hsl(220, 20%, 97%)" fillOpacity="0.7" />
+          </svg>
+        </div>
+      </section>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {services.map((service, index) => (
-            <Card
-              key={index}
-              className={`shadow-card hover:shadow-corporate transition-all duration-300 hover:-translate-y-1`}
-            >
-              <CardHeader>
-                <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center mb-4">
-                  <service.icon className="h-6 w-6 text-primary-foreground" />
+      <div className="container mx-auto px-6 py-24">
+        {/* ---- Services Grid ---- */}
+        <div className="mb-24">
+          <div className="section-eyebrow justify-center mb-4">Çözümlerimiz</div>
+          <h2
+            className="text-3xl font-bold text-[hsl(216,100%,12%)] text-center mb-12"
+            style={{ fontFamily: "'Syne', sans-serif" }}
+          >
+            Tüm Hizmetlerimiz
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.map((service, index) => (
+              <article
+                key={index}
+                className="card-pro p-7 flex flex-col gap-5 animate-fade-in-up"
+                style={{ animationDelay: `${(index % 6) * 60}ms` }}
+              >
+                {/* Icon + title */}
+                <div className="flex items-start gap-4">
+                  <div className="service-icon-wrap flex-shrink-0">
+                    <service.icon className="h-5 w-5 text-white" aria-hidden="true" />
+                  </div>
+                  <h3
+                    className="font-bold text-[hsl(216,100%,12%)] text-sm leading-snug pt-1"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {service.title}
+                  </h3>
                 </div>
-                <CardTitle className="text-primary text-lg">{service.title}</CardTitle>
-                <CardDescription className="text-base">
+
+                <p className="text-[hsl(216,20%,45%)] text-sm leading-relaxed">
                   {service.description}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="text-sm text-muted-foreground flex items-start">
-                      <span className="text-primary mr-2">•</span>
+                </p>
+
+                {/* Feature list */}
+                <ul className="space-y-1.5 mt-auto">
+                  {service.features.map((feature, fi) => (
+                    <li
+                      key={fi}
+                      className="flex items-start gap-2.5 text-xs text-[hsl(216,20%,45%)]"
+                    >
+                      <Check
+                        size={13}
+                        className="flex-shrink-0 mt-0.5"
+                        style={{ color: "hsl(216 100% 12%)" }}
+                      />
                       {feature}
                     </li>
                   ))}
                 </ul>
-              </CardContent>
-            </Card>
-          ))}
+              </article>
+            ))}
+          </div>
         </div>
 
-        {/* Process Section */}
-        <section className="bg-secondary rounded-lg p-8 md:p-12 mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-primary mb-4">
-              Çalışma Sürecimiz
-            </h2>
-            <p className="text-muted-foreground">
-              Projelerinizi başarıyla tamamlamak için izlediğimiz adımlar
-            </p>
-          </div>
+        {/* ---- Process Section ---- */}
+        <section
+          className="rounded-2xl px-8 py-16 mb-16 relative overflow-hidden"
+          id="process"
+          style={{ background: "linear-gradient(135deg, hsl(216 100% 11%), hsl(216 80% 18%))" }}
+        >
+          <div
+            className="absolute inset-0 opacity-20"
+            style={{
+              backgroundImage: "linear-gradient(hsl(214 50% 65% / 0.08) 1px, transparent 1px), linear-gradient(90deg, hsl(214 50% 65% / 0.08) 1px, transparent 1px)",
+              backgroundSize: "36px 36px",
+            }}
+            aria-hidden="true"
+          />
+          <div className="relative z-10">
+            <div className="text-center mb-14">
+              <div className="tech-chip tech-chip-inverted inline-flex mb-4">
+                <span className="w-1.5 h-1.5 rounded-full bg-blue-300 animate-pulse" />
+                Sürecimiz
+              </div>
+              <h2
+                className="text-3xl font-bold text-white mb-3"
+                style={{ fontFamily: "'Syne', sans-serif" }}
+              >
+                Çalışma Sürecimiz
+              </h2>
+              <p className="text-blue-200/60 text-sm">Projelerinizi başarıyla tamamlamak için izlediğimiz adımlar</p>
+            </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-primary-foreground font-bold text-xl">1</span>
-              </div>
-              <h3 className="font-semibold text-primary mb-2">Analiz</h3>
-              <p className="text-sm text-muted-foreground">
-                İhtiyaçlarınızı detaylı olarak analiz eder ve en uygun çözümü belirleriz.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-primary-foreground font-bold text-xl">2</span>
-              </div>
-              <h3 className="font-semibold text-primary mb-2">Planlama</h3>
-              <p className="text-sm text-muted-foreground">
-                Proje planını hazırlar, zaman çizelgesi ve kaynak dağılımını belirleriz.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-primary-foreground font-bold text-xl">3</span>
-              </div>
-              <h3 className="font-semibold text-primary mb-2">Geliştirme</h3>
-              <p className="text-sm text-muted-foreground">
-                Uzman ekibimizle çözümü geliştirir ve test ederiz.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-primary-foreground font-bold text-xl">4</span>
-              </div>
-              <h3 className="font-semibold text-primary mb-2">Teslimat</h3>
-              <p className="text-sm text-muted-foreground">
-                Çözümü teslim eder, eğitim verir ve sürekli destek sağlarız.
-              </p>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+              {processSteps.map((step, i) => (
+                <div
+                  key={i}
+                  className="process-step rounded-xl p-7 text-center"
+                  style={{ background: "hsl(0 0% 100% / 0.06)", border: "1px solid hsl(0 0% 100% / 0.1)" }}
+                >
+                  <div
+                    className="text-5xl font-extrabold mb-4 block"
+                    style={{ fontFamily: "'Syne', sans-serif", color: "hsl(0 0% 100% / 0.12)" }}
+                    aria-hidden="true"
+                  >
+                    {step.step}
+                  </div>
+                  <h3
+                    className="font-bold text-white mb-2"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {step.title}
+                  </h3>
+                  <p className="text-blue-200/60 text-xs leading-relaxed">{step.desc}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="text-center bg-gradient-primary rounded-lg p-8 md:p-12 text-primary-foreground">
-          <h2 className="text-3xl font-bold mb-4">
-            Projeniz İçin Ücretsiz Danışmanlık Alın
-          </h2>
-          <p className="text-xl mb-8 text-primary-foreground/90 max-w-2xl mx-auto">
-            Hangi hizmete ihtiyacınız olduğundan emin değil misiniz?
-            Uzman ekibimizle görüşerek size en uygun çözümü belirleyelim.
-          </p>
-          <div className="flex justify-center">
-            <Button asChild size="lg" variant="secondary" className="w-full md:w-auto">
-              <Link to="/iletisim">
-                Bizi Tanıyın
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
+        {/* ---- CTA ---- */}
+        <section className="cta-banner px-8 py-16 md:py-20 text-center" id="services-cta">
+          <div className="relative z-10 max-w-2xl mx-auto">
+            <h2
+              className="text-3xl font-bold text-white mb-4"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
+              Projeniz İçin Ücretsiz Danışmanlık Alın
+            </h2>
+            <p className="text-blue-100/70 text-lg mb-10">
+              Hangi hizmete ihtiyacınız olduğundan emin değil misiniz?
+              Uzman ekibimizle görüşerek size en uygun çözümü belirleyelim.
+            </p>
+            <Link
+              to="/iletisim"
+              id="services-cta-link"
+              className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl text-sm font-semibold text-[hsl(216,100%,12%)] bg-white transition-all duration-200 hover:shadow-xl hover:-translate-y-1"
+              style={{ boxShadow: "0 4px 16px hsl(0 0% 0% / 0.15)" }}
+            >
+              Bizi Tanıyın
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </section>
       </div>

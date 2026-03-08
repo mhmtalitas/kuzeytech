@@ -10,7 +10,7 @@ import WhatsAppButton from "./components/WhatsAppButton";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
-// import Products from "./pages/Products"; // Geçici olarak askıya alındı
+import Products from "./pages/Products";
 // import References from "./pages/References"; // Geçici olarak askıya alındı
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
@@ -49,7 +49,7 @@ const App = () => (
                 <Route path="/" element={<Home />} />
                 <Route path="/hakkimizda" element={<About />} />
                 <Route path="/hizmetler" element={<Services />} />
-                {/* <Route path="/urunler" element={<Products />} /> */}
+                <Route path="/urunler" element={<Products />} />
                 {/* <Route path="/urun-detay/:slug" element={<ProductDetail />} /> */}
                 {/* <Route path="/referanslar" element={<References />} /> */}
                 <Route path="/blog" element={<Blog />} />
