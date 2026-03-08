@@ -317,7 +317,7 @@ const productsList = [
 ];
 
 const Products = () => {
-  const [activeTab, setActiveTab] = useState("admin-toolkit"); // Default Admin Toolkit for showcase
+  const [activeTab, setActiveTab] = useState("booldesk"); // Default Booldesk for showcase
   const location = useLocation();
 
   useEffect(() => {
@@ -330,8 +330,8 @@ const Products = () => {
     }
   }, [location]);
 
-  const activeProduct = productsData[activeTab] || productsData["admin-toolkit"];
-  const ActiveIcon = productsList.find(p => p.id === activeTab)?.icon || Settings;
+  const activeProduct = productsData[activeTab] || productsData["booldesk"];
+  const ActiveIcon = productsList.find(p => p.id === activeTab)?.icon || LayoutDashboard;
 
   return (
     <>
