@@ -540,11 +540,11 @@ const Products = () => {
                 <div className="absolute top-0 bottom-0 left-0 w-32 bg-gradient-to-r from-[hsl(220,20%,97%)] to-transparent z-10 pointer-events-none"></div>
                 <div className="absolute top-0 bottom-0 right-0 w-32 bg-gradient-to-l from-[hsl(220,20%,97%)] to-transparent z-10 pointer-events-none"></div>
 
-                <div className="flex overflow-x-hidden group">
+                {/* 1. Satır: Sola Kayan Logolar (1-8) */}
+                <div className="flex overflow-x-hidden group mb-8">
                   <div className="animate-marquee-scroll whitespace-nowrap flex space-x-20 items-center">
-                    {/* Logolar buraya harici parçalanarak gelecek. Placeholder olarak 16 slot ayrıldı */}
-                    {[...Array(16)].map((_, index) => (
-                      <div key={`ref1-${index}`} className="flex items-center justify-center w-56 h-32 opacity-70 hover:opacity-100 hover:scale-110 transition-all duration-300">
+                    {[...Array(8)].map((_, index) => (
+                      <div key={`row1-set1-${index}`} className="flex items-center justify-center w-56 h-32 opacity-70 hover:opacity-100 hover:scale-110 transition-all duration-300">
                         <img 
                           src={`/images/references/ref_${index + 1}.png`} 
                           alt={`Referans ${index + 1}`} 
@@ -559,12 +559,45 @@ const Products = () => {
                     ))}
                   </div>
                   <div className="animate-marquee-scroll whitespace-nowrap flex space-x-20 items-center ml-20">
-                    {/* Döngünün kesintisiz devam etmesi için 2. set (Seamless Loop) */}
-                    {[...Array(16)].map((_, index) => (
-                      <div key={`ref2-${index}`} className="flex items-center justify-center w-56 h-32 opacity-70 hover:opacity-100 hover:scale-110 transition-all duration-300">
+                    {[...Array(8)].map((_, index) => (
+                      <div key={`row1-set2-${index}`} className="flex items-center justify-center w-56 h-32 opacity-70 hover:opacity-100 hover:scale-110 transition-all duration-300">
                         <img 
                           src={`/images/references/ref_${index + 1}.png`} 
                           alt={`Referans ${index + 1}`} 
+                          className="max-h-24 max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300 mix-blend-multiply"
+                          onError={(e) => {
+                            (e.target as HTMLImageElement).src = "/placeholder.svg";
+                            (e.target as HTMLImageElement).classList.add("opacity-30");
+                          }}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* 2. Satır: Sağa Kayan Logolar (9-16) */}
+                <div className="flex overflow-x-hidden group">
+                  <div className="animate-marquee-scroll-reverse whitespace-nowrap flex space-x-20 items-center">
+                    {[...Array(8)].map((_, index) => (
+                      <div key={`row2-set1-${index}`} className="flex items-center justify-center w-56 h-32 opacity-70 hover:opacity-100 hover:scale-110 transition-all duration-300">
+                        <img 
+                          src={`/images/references/ref_${index + 9}.png`} 
+                          alt={`Referans ${index + 9}`} 
+                          className="max-h-24 max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300 mix-blend-multiply"
+                          onError={(e) => {
+                            (e.target as HTMLImageElement).src = "/placeholder.svg"; 
+                            (e.target as HTMLImageElement).classList.add("opacity-30");
+                          }}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                  <div className="animate-marquee-scroll-reverse whitespace-nowrap flex space-x-20 items-center ml-20">
+                    {[...Array(8)].map((_, index) => (
+                      <div key={`row2-set2-${index}`} className="flex items-center justify-center w-56 h-32 opacity-70 hover:opacity-100 hover:scale-110 transition-all duration-300">
+                        <img 
+                          src={`/images/references/ref_${index + 9}.png`} 
+                          alt={`Referans ${index + 9}`} 
                           className="max-h-24 max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300 mix-blend-multiply"
                           onError={(e) => {
                             (e.target as HTMLImageElement).src = "/placeholder.svg";

@@ -291,6 +291,13 @@
 .animate-marquee-scroll {
   animation: marquee-scroll 32s linear infinite;
 }
+@keyframes marquee-scroll-reverse {
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+.animate-marquee-scroll-reverse {
+  animation: marquee-scroll-reverse 32s linear infinite;
+}
 .animate-gradient-shift {
   background-size: 200% 200%;
   animation: gradient-shift 5s ease infinite;
